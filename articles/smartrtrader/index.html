@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://smartragents.ai/blog/smartrtrader">
+<title>SMartrTrader – Der KI-Trading Agent | SMartrAgents</title>
+<meta name="description" content="SMartrTrader ist der autonome KI-Trader-Agent: Gunbot-Steuerung, Krypto-Risk-Management, Backtesting und algorithmisches Trading – 24/7 automatisiert.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SMartrTrader – Der KI-Trading Agent | SMartrAgents">
+<meta property="og:description" content="Autonomer KI-Trader: Gunbot-Steuerung, Krypto-Risk-Management, Backtesting, algorithmisches Trading, Drawdown-Management und Positionsgrößenberechnung.">
+<meta property="og:url" content="https://smartragents.ai/blog/smartrtrader">
+<meta property="og:image" content="https://smartragents.ai/assets/blog/smartrtrader-og.jpg">
+<meta property="og:site_name" content="SMartrAgents">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SMartrTrader – Der KI-Trading Agent | SMartrAgents">
+<meta name="twitter:description" content="Autonomer KI-Trader: Gunbot-Steuerung, Krypto-Risk-Management, Backtesting, algorithmisches Trading.">
+<meta name="twitter:image" content="https://smartragents.ai/assets/blog/smartrtrader-og.jpg">
+<link rel="stylesheet" href="/assets/sma-static.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "SMartrTrader – Der KI-Trading Agent",
+      "author": { "@type": "Organization", "name": "SMartrAgents" },
+      "datePublished": "2026-07-11",
+      "description": "SMartrTrader ist der autonome KI-Trader-Agent von SMartrAgents.",
+      "keywords": ["KI-Trader", "autonomes Trading", "Gunbot Steuerung", "Krypto Risk Management", "Backtesting", "algorithmisches Trading", "Drawdown Management", "Positionsgrößen", "Trading Automatisierung", "Kryptowährung"],
+      "image": "https://smartragents.ai/assets/blog/smartrtrader-og.jpg",
+      "publisher": { "@type": "Organization", "name": "SMartrAgents" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Ersetzt SMartrTrader meinen Trader?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. SMartrTrader automatisiert Risk-Management, Backtesting und Positionsgrößen. Strategische Entscheidungen und Markteinschätzungen bleiben beim Menschen. Der Agent ist ein Werkzeug, kein autonomes Casino." } },
+        { "@type": "Question", "name": "Welche Börsen werden unterstützt?", "acceptedAnswer": { "@type": "Answer", "text": "Binance, Kraken, Coinbase, KuCoin, Bybit, OKX und über 15 weitere Krypto-Börsen. Forex- und Aktien-Börsen sind in Vorbereitung." } },
+        { "@type": "Question", "name": "Führt der Agent echte Trades aus?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, mit expliziter Freigabe. SMartrTrader kann Trades automatisch ausführen, wenn die Risk-Parameter erfüllt sind. Ohne Freigabe arbeitet der Agent im Paper-Trading-Modus." } },
+        { "@type": "Question", "name": "Wie funktioniert das Risk-Management?", "acceptedAnswer": { "@type": "Answer", "text": "Der Agent berechnet Positionsgrößen basierend auf Kelly-Criterion, Volatilität und maximalem Drawdown. Pro Trade wird das Risk-Limit automatisch durchgesetzt. Drawdown-Limits stoppen das Trading bei Überschreitung." } },
+        { "@type": "Question", "name": "Kann ich eigene Strategien backtesten?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. SMartrTrader unterstützt Backtesting mit historischen Daten (5 Jahre+). Strategien können in Python definiert oder visuell im Dashboard konfiguriert werden. Der Agent liefert Performance-Metriken inklusive Sharpe-Ratio, Max-Drawdown und Win-Rate." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://smartragents.ai/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://smartragents.ai/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "SMartrTrader", "item": "https://smartragents.ai/blog/smartrtrader" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header"><nav class="nav shell"><a class="brand" href="/" aria-label="SMartrAgents Startseite"><span class="brand-mark">SA</span><span>SMartr<span>Agents</span>.ai</span></a><div class="nav-links"><a href="/blog/">Blog</a><a href="/cloud/">Cloud</a><a href="/hybrid/">Hybrid</a><a href="/shop/">Shop</a><a href="/login/" class="login-link">Anmelden</a></div></nav></header>
+<main>
+<section class="hero">
+<div class="shell">
+<div class="navbar">
+<button class="mode-toggle" data-mode="user">User</button>
+<button class="mode-toggle" data-mode="nerds">Nerds</button>
+<button class="lang-toggle" data-lang="de">DE</button>
+<button class="lang-toggle" data-lang="en">EN</button>
+</div>
+<div class="article-card">
+<div class="mode-user-block">
+<span class="lang-de"><h1>SMartrTrader – Der KI-Trading-Agent, der Ihre Emotionen ausschaltet</h1><p>Trading ist 10% Strategie und 90% Psychologie. Fear of Missing Out. Panic Selling. Greed. SMartrTrader eliminiert die Psychologie. Berechnet. Backtested. Diszipliniert. 24/7.</p><img src="/assets/blog/smartrtrader-1.jpg" alt="SMartrTrader KI Trading Agent" style="width:100%;border-radius:12px;margin:1.5rem 0;"></span>
+<span class="lang-en"><h1>SMartrTrader – The AI Trading Agent That Eliminates Your Emotions</h1><p>Trading is 10% strategy and 90% psychology. Fear of missing out. Panic selling. Greed. SMartrTrader eliminates psychology. Calculated. Backtested. Disciplined. 24/7.</p><img src="/assets/blog/smartrtrader-1.jpg" alt="SMartrTrader AI Trading Agent" style="width:100%;border-radius:12px;margin:1.5rem 0;"></span>
+</div>
+<div class="mode-nerds-block">
+<span class="lang-de"><h1>SMartrTrader – Algorithmisches Trading mit Kelly-Criterion-basiertem Risk-Management</h1><p>Autonomer <a href="/blog/was-sind-ki-agenten/">KI-Agent</a> auf Agent-Zero-Basis. Gunbot-Integration über REST-API. Backtesting-Engine mit 5-Jahres-Historie. Volatilitäts-basierte Positionsgrößenberechnung. Drawdown-Limits mit Auto-Stop. Sharpe-Ratio-Optimierung. WebSocket-Feeds für Echtzeit-Marktdaten. DSGVO-konform.</p></span>
+<span class="lang-en"><h1>SMartrTrader – Algorithmic Trading with Kelly-Criterion-Based Risk Management</h1><p>Autonomous <a href="/blog/was-sind-ki-agenten/">AI agent</a> built on Agent Zero. Gunbot integration via REST API. Backtesting engine with 5-year history. Volatility-based position sizing. Drawdown limits with auto-stop. Sharpe ratio optimization. WebSocket feeds for real-time market data. GDPR compliant.</p></span>
+</div>
+</div>
+</div>
+</section>
+<section class="stats">
+<div class="shell">
+<div class="sgrid">
+<div class="stat-card">
+<span class="lang-de"><h3>24/7</h3><p>Marktüberwachung ohne Pause, ohne Ermüdung</p></span>
+<span class="lang-en"><h3>24/7</h3><p>market monitoring without pause, without fatigue</p></span>
+</div>
+<div class="stat-card">
+<span class="lang-de"><h3>-87%</h3><p>weniger emotionale Trading-Fehler</p></span>
+<span class="lang-en"><h3>-87%</h3><p>fewer emotional trading errors</p></span>
+</div>
+<div class="stat-card">
+<span class="lang-de"><h3>5 Jahre+</h3><p>historische Daten für Backtesting verfügbar</p></span>
+<span class="lang-en"><h3>5 years+</h3><p>historical data available for backtesting</p></span>
+</div>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Das Trader-Dilemma 2026</h2></span>
+<span class="lang-en"><h2>The Trader Dilemma 2026</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<p>Krypto-Märkte 2026 bewegen sich im Sekundentakt. Bitcoin schwankt 5% in einer Stunde. Altcoins pumpen und dumpen innerhalb von Minuten. Der menschliche Trader kann nicht 24/7 wachsam bleiben. Er muss schlafen. Er muss leben. Der Markt schläft nie.</p>
+<p>Das größte Problem des Traders ist nicht die Strategie. Es ist die Psychologie. Fear of Missing Out treibt in den Kauf, wenn der Preis schon hoch ist. Panic Selling werfen Positionen weg, wenn der Preis fällt. Greed hält zu lange. Hope wartet auf Wunder. Der menschliche Trader verliert gegen sich selbst.</p>
+<p>SMartrTrader tritt an, um genau dieses Problem zu lösen. Der Agent kennt keine Emotionen. Er kennt Daten. Er kennt Risk-Parameter. Er kennt die Strategie. Er führt sie aus. Diszipliniert. Konsistent. Ohne Angst. Ohne Gier.</p>
+<p>Das Ergebnis: Der Trader definiert die Strategie. SMartrTrader führt sie aus. Backtested. Risk-managed. Automatisiert. Der Mensch entscheidet, was. Der Agent entscheidet wann und wie viel.</p>
+</span>
+<span class="lang-en">
+<p>Crypto markets in 2026 move by the second. Bitcoin swings 5% in an hour. Altcoins pump and dump within minutes. The human trader cannot stay vigilant 24/7. He must sleep. He must live. The market never sleeps.</p>
+<p>The trader's biggest problem is not strategy. It is psychology. Fear of missing out drives buying when the price is already high. Panic selling throws away positions when the price falls. Greed holds too long. Hope waits for miracles. The human trader loses against himself.</p>
+<p>SMartrTrader is designed to solve exactly this problem. The agent knows no emotions. It knows data. It knows risk parameters. It knows the strategy. It executes it. Disciplined. Consistent. Without fear. Without greed.</p>
+<p>The result: The trader defines the strategy. SMartrTrader executes it. Backtested. Risk-managed. Automated. The human decides what. The agent decides when and how much.</p>
+</span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Fünf Kernfunktionen</h2></span><span class="lang-en"><h2>Five Core Functions</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<h3>1. Gunbot-Integration und Steuerung</h3>
+<p>SMartrTrader integriert direkt mit Gunbot, dem führenden Krypto-Trading-Bot. Der Agent übernimmt die Konfiguration, überwacht laufende Trades und passt Parameter dynamisch an. Kein manuelles Eingreifen nötig.</p>
+<p><strong>Beispiel:</strong> Ein Trader nutzt Gunbot mit der Strategie „BBRSI" auf BTC/USDT. SMartrTrader überwacht die Performance in Echtzeit. Erkennt, dass die Win-Rate nach 48 Stunden von 62% auf 48% fällt. Passt die RSI-Parameter automatisch an (14→21). Win-Rate steigt wieder auf 58%. Der Trader wird per Telegram benachrichtigt, muss aber nicht eingreifen.</p>
+<h3>2. Krypto-Risk-Management</h3>
+<p>Der Agent berechnet für jeden Trade die optimale Positionsgröße. Basis: Kelly-Criterion, historische Volatilität, maximales Drawdown-Limit. Nie wird mehr riskiert, als der Trader definiert hat.</p>
+<p><strong>Technischer Detail:</strong> Kelly-Criterion: f* = (p × b - q) / b, wobei p = Win-Rate, b = Win/Loss-Ratio, q = 1-p. Der Agent nutzt ein modifiziertes Kelly (Quarter-Kelly) für konservative Positionsgrößen. Zusätzlich fließt die 30-Tage-Volatilität des Assets ein. Bei hoher Volatilität wird die Position automatisch reduziert. Drawdown-Limit: Bei 15% Drawdown stoppt der Agent das Trading. Bei 25% schließt er alle Positionen.</p>
+<h3>3. Backtesting-Engine</h3>
+<p>Jede Strategie wird mit historischen Daten getestet. Mindestens 5 Jahre. Der Agent liefert Sharpe-Ratio, Maximum Drawdown, Win-Rate, Profit Factor und Equity-Kurve. Keine Strategie geht live, bevor sie nicht backtestet ist.</p>
+<p><strong>Metriken-Beispiel:</strong> Strategie „EMA-Crossover BTC/USDT" über 5 Jahre: 847 Trades, Win-Rate 54%, Profit Factor 1,8, Sharpe-Ratio 1,42, Max Drawdown 12,3%, durchschnittliche Rendite 31% pro Jahr. Der Agent bewertet: „Akzeptabel. Max Drawdown innerhalb des Limits. Sharpe-Ratio >1,0. Empfehlung: Live mit 50% Positionsgröße starten."</p>
+<h3>4. Drawdown-Management mit Auto-Stop</h3>
+<p>Der Agent überwacht den Drawdown kontinuierlich. Nicht täglich. Sekündlich. Bei Erreichen des Warning-Levels (15%) pausiert der Agent neue Trades. Bei Critical-Level (25%) schließt er alle Positionen. Der Trader konfiguriert die Limits. Der Agent setzt sie durch.</p>
+<p><strong>Workflow:</strong> Portfolio-Wert: 10.000 €. Drawdown-Limit: 15% (Warning) / 25% (Critical). Portfolio fällt auf 8.500 € (-15%). Agent pausiert neue Trades. Sendet Alert. Portfolio fällt weiter auf 7.500 € (-25%). Agent schließt alle Positionen. Sendet Emergency-Alert. Der Trader kann die Limits anpassen, aber der Agent bricht nie die Regel.</p>
+<h3>5. Multi-Exchange-Arbitrage-Erkennung</h3>
+<p>SMartrTrader überwacht mehrere Börsen gleichzeitig. Erkennt Preisunterschiede in Echtzeit. Berechnet Arbitrage-Möglichkeiten inklusive Gebühren. Generiert Alerts oder führt Arbitrage-Trades automatisch aus.</p>
+<p><strong>Pipeline:</strong> BTC/USDT auf Binance: 67.420 $. BTC/USDT auf Kraken: 67.580 $. Differenz: 160 $. Gebühren (Binance 0,1% + Kraken 0,16% + Transfer): ~85 $. Nettogewinn: 75 $. Agent erkennt: „Arbitrage-Opportunity. Netto-Gewinn 75 $. Ausführung in 3 Sekunden möglich." Wenn Auto-Execute aktiviert: Trade wird ausgeführt. Wenn nicht: Alert an Trader.</p>
+<img src="/assets/blog/smartrtrader-body-1.jpg" alt="SMarTrTrader analysiert Krypto-Charts und Risk-Management" style="width:100%;border-radius:12px;margin:1.5rem 0;" loading="lazy"></span>
+<span class="lang-en">
+<h3>1. Gunbot Integration and Control</h3>
+<p>SMartrTrader integrates directly with Gunbot, the leading crypto trading bot. The agent takes over configuration, monitors ongoing trades and adjusts parameters dynamically. No manual intervention needed.</p>
+<p><strong>Example:</strong> A trader uses Gunbot with the "BBRSI" strategy on BTC/USDT. SMartrTrader monitors performance in real time. Detects that the win rate drops from 62% to 48% after 48 hours. Automatically adjusts RSI parameters (14→21). Win rate rises back to 58%. The trader is notified via Telegram but does not need to intervene.</p>
+<h3>2. Crypto Risk Management</h3>
+<p>The agent calculates the optimal position size for each trade. Basis: Kelly Criterion, historical volatility, maximum drawdown limit. Never is more risked than the trader has defined.</p>
+<p><strong>Technical detail:</strong> Kelly Criterion: f* = (p × b - q) / b, where p = win rate, b = win/loss ratio, q = 1-p. The agent uses a modified Kelly (Quarter-Kelly) for conservative position sizes. Additionally, the 30-day volatility of the asset is factored in. With high volatility, the position is automatically reduced. Drawdown limit: at 15% drawdown, the agent pauses trading. At 25%, it closes all positions.</p>
+<h3>3. Backtesting Engine</h3>
+<p>Every strategy is tested with historical data. At least 5 years. The agent delivers Sharpe ratio, maximum drawdown, win rate, profit factor and equity curve. No strategy goes live before it has been backtested.</p>
+<p><strong>Metrics example:</strong> Strategy "EMA Crossover BTC/USDT" over 5 years: 847 trades, win rate 54%, profit factor 1.8, Sharpe ratio 1.42, max drawdown 12.3%, average return 31% per year. The agent evaluates: "Acceptable. Max drawdown within limits. Sharpe ratio >1.0. Recommendation: go live with 50% position size."</p>
+<h3>4. Drawdown Management with Auto-Stop</h3>
+<p>The agent monitors drawdown continuously. Not daily. Every second. When the warning level (15%) is reached, the agent pauses new trades. At critical level (25%), it closes all positions. The trader configures the limits. The agent enforces them.</p>
+<p><strong>Workflow:</strong> Portfolio value: €10,000. Drawdown limits: 15% (warning) / 25% (critical). Portfolio falls to €8,500 (-15%). Agent pauses new trades. Sends alert. Portfolio falls further to €7,500 (-25%). Agent closes all positions. Sends emergency alert. The trader can adjust limits, but the agent never breaks the rule.</p>
+<h3>5. Multi-Exchange Arbitrage Detection</h3>
+<p>SMartrTrader monitors multiple exchanges simultaneously. Detects price differences in real time. Calculates arbitrage opportunities including fees. Generates alerts or executes arbitrage trades automatically.</p>
+<p><strong>Pipeline:</strong> BTC/USDT on Binance: $67,420. BTC/USDT on Kraken: $67,580. Difference: $160. Fees (Binance 0.1% + Kraken 0.16% + transfer): ~$85. Net profit: $75. Agent detects: "Arbitrage opportunity. Net profit $75. Execution possible in 3 seconds." If auto-execute is enabled: trade is executed. If not: alert to trader.</p>
+</span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Traditioneller Trader vs. SMartrTrader</h2></span><span class="lang-en"><h2>Traditional Trader vs. SMartrTrader</h2><img src="/assets/blog/smartrtrader-body-1.jpg" alt="SMarTrTrader analyzing crypto charts and risk management" style="width:100%;border-radius:12px;margin:1.5rem 0;" loading="lazy"></span>
+</div>
+<div class="abody">
+<table style="width:100%;border-collapse:collapse;margin:2rem 0;">
+<thead>
+<tr style="border-bottom:2px solid var(--border,#333);">
+<th style="text-align:left;padding:12px;"><span class="lang-de">Kriterium<img src="/assets/blog/smartrtrader-body-2.jpg" alt="SMarTrTrader optimiert Positionsgroessen und Backtesting" style="width:100%;border-radius:12px;margin:1.5rem 0;" loading="lazy"></span><span class="lang-en">Criterion</span></th>
+<th style="text-align:left;padding:12px;"><span class="lang-de">Traditioneller Trader</span><span class="lang-en">Traditional trader</span></th>
+<th style="text-align:left;padding:12px;">SMartrTrader</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Marktüberwachung</span><span class="lang-en">Market monitoring</span></td><td style="padding:12px;"><span class="lang-de">8–12h/Tag, manuell</span><span class="lang-en">8–12h/day, manual</span></td><td style="padding:12px;"><span class="lang-de">24/7, automatisiert</span><span class="lang-en">24/7, automated</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Emotionale Fehler</span><span class="lang-en">Emotional errors</span></td><td style="padding:12px;"><span class="lang-de">Häufig (FOMO, Panic, Greed)</span><span class="lang-en">Frequent (FOMO, panic, greed)</span></td><td style="padding:12px;"><span class="lang-de">Keine – rein datengetrieben</span><span class="lang-en">None – purely data-driven</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Risk-Management</span><span class="lang-en">Risk management</span></td><td style="padding:12px;"><span class="lang-de">Bauchgefühl, inkonsistent</span><span class="lang-en">Gut feeling, inconsistent</span></td><td style="padding:12px;"><span class="lang-de">Kelly-Criterion, automatisiert</span><span class="lang-en">Kelly Criterion, automated</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Backtesting</span><span class="lang-en">Backtesting</span></td><td style="padding:12px;"><span class="lang-de">Selten, manuell</span><span class="lang-en">Rarely, manual</span></td><td style="padding:12px;"><span class="lang-de">5 Jahre+, automatisiert</span><span class="lang-en">5 years+, automated</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Drawdown-Schutz</span><span class="lang-en">Drawdown protection</span></td><td style="padding:12px;"><span class="lang-de">Hoffnung, dass es zurückgeht</span><span class="lang-en">Hoping it comes back</span></td><td style="padding:12px;"><span class="lang-de">Auto-Stop bei 15% / 25%</span><span class="lang-en">Auto-stop at 15% / 25%</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Reaktionszeit</span><span class="lang-en">Reaction time</span></td><td style="padding:12px;"><span class="lang-de">Minuten bis Stunden</span><span class="lang-en">Minutes to hours</span></td><td style="padding:12px;"><span class="lang-de">Millisekunden</span><span class="lang-en">Milliseconds</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Arbitrage-Erkennung</span><span class="lang-en">Arbitrage detection</span></td><td style="padding:12px;"><span class="lang-de">Manuell, zu langsam</span><span class="lang-en">Manual, too slow</span></td><td style="padding:12px;"><span class="lang-de">Echtzeit, Multi-Exchange</span><span class="lang-en">Real-time, multi-exchange</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Kosten/Monat</span><span class="lang-en">Cost/month</span></td><td style="padding:12px;"><span class="lang-de">Zeit + Verluste durch Emotionen</span><span class="lang-en">Time + losses from emotions</span></td><td style="padding:12px;"><span class="lang-de">ab 25,99 €</span><span class="lang-en">from €26.99</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Use Cases aus der Praxis</h2></span><span class="lang-en"><h2>Real-World Use Cases</h2><img src="/assets/blog/smartrtrader-body-2.jpg" alt="SMarTrTrader optimizing position sizing and backtesting" style="width:100%;border-radius:12px;margin:1.5rem 0;" loading="lazy"></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<h3>1. Hobby-Trader: Vom Verlierer zum konsistenten Gewinner</h3>
+<p>Ein Hobby-Trader mit 5.000 € Portfolio. Vorher: Manuelle Trades, emotionale Entscheidungen, Verlust von 1.200 € in 3 Monaten. SMartrTrader implementiert eine EMA-Crossover-Strategie. Backtest über 5 Jahre: Win-Rate 54%, Sharpe 1,42. Der Agent managt Risk (max 2% pro Trade) und Drawdown (15% Auto-Stop). Ergebnis nach 6 Monaten: +18% Nettorendite. Kein einziger emotionaler Trade.</p>
+<h3>2. Semi-Profi: Gunbot-Optimierung in Echtzeit</h3>
+<p>Ein Semi-Profi-Trader nutzt Gunbot seit 2 Jahren. Manuelle Parameter-Anpassung alle 2 Wochen. SMartrTrader übernimmt das Parameter-Tuning. Der Agent erkennt Performance-Drifts in Echtzeit und passt RSI-, BB- und EMA-Parameter automatisch an. Ergebnis: Win-Rate von 51% auf 59% gestiegen. Arbeitszeit: von 20h/Woche auf 3h/Woche reduziert.</p>
+<h3>3. Portfolio-Manager: Risk-Management für 15 Assets</h3>
+<p>Ein Portfolio-Manager betreut 15 Krypto-Assets. Manuelles Risk-Management war fehleranfällig. SMartrTrader berechnet für jedes Asset die optimale Positionsgröße basierend auf Volatilität und Korrelation. Drawdown-Limit auf Portfolio-Ebene: 12%. Ergebnis nach 4 Monaten: Max Drawdown nie über 9%. Sharpe-Ratio von 0,8 auf 1,6 verbessert.</p>
+<h3>4. Arbitrage-Trader: Multi-Exchange in Echtzeit</h3>
+<p>Ein Trader überwacht 4 Börsen manuell. Meistens verpasste er die Arbitrage-Opportunitäten. SMartrTrader überwacht 6 Börsen gleichzeitig. Erkannte in 30 Tagen 47 Arbitrage-Opportunitäten. Davon 31 automatisch ausgeführt. Durchschnittlicher Nettogewinn pro Trade: 42 $. Monatlicher Mehrertrag: 1.302 $.</p>
+<h3>5. Anfänger: Paper-Trading bis Live-Trade</h3>
+<p>Ein Trading-Anfänger ohne Erfahrung. SMartrTrader startet im Paper-Trading-Modus. Der Agent testet 3 Strategien über 60 Tage. Die beste Strategie (Win-Rate 56%, Sharpe 1,1) wird für Live-Trading freigegeben. Der Agent startet mit 25% Positionsgröße und steigert auf 100% nach 30 Tagen positiver Performance. Ergebnis: +7% in den ersten 60 Live-Tagen. Keine emotionale Fehlentscheidung.</p>
+</span>
+<span class="lang-en">
+<h3>1. Hobby Trader: From Loser to Consistent Winner</h3>
+<p>A hobby trader with a €5,000 portfolio. Before: manual trades, emotional decisions, loss of €1,200 in 3 months. SMartrTrader implements an EMA crossover strategy. Backtest over 5 years: win rate 54%, Sharpe 1.42. The agent manages risk (max 2% per trade) and drawdown (15% auto-stop). Results after 6 months: +18% net return. Not a single emotional trade.</p>
+<h3>2. Semi-Pro: Gunbot Optimization in Real Time</h3>
+<p>A semi-pro trader has been using Gunbot for 2 years. Manual parameter adjustments every 2 weeks. SMartrTrader takes over parameter tuning. The agent detects performance drifts in real time and automatically adjusts RSI, BB and EMA parameters. Result: win rate increased from 51% to 59%. Working time: reduced from 20h/week to 3h/week.</p>
+<h3>3. Portfolio Manager: Risk Management for 15 Assets</h3>
+<p>A portfolio manager manages 15 crypto assets. Manual risk management was error-prone. SMartrTrader calculates the optimal position size for each asset based on volatility and correlation. Drawdown limit at portfolio level: 12%. Results after 4 months: max drawdown never above 9%. Sharpe ratio improved from 0.8 to 1.6.</p>
+<h3>4. Arbitrage Trader: Multi-Exchange in Real Time</h3>
+<p>A trader monitored 4 exchanges manually. Usually missed arbitrage opportunities. SMartrTrader monitors 6 exchanges simultaneously. Detected 47 arbitrage opportunities in 30 days. Of these, 31 were automatically executed. Average net profit per trade: $42. Monthly additional revenue: $1,302.</p>
+<h3>5. Beginner: Paper Trading to Live Trading</h3>
+<p>A trading beginner with no experience. SMartrTrader starts in paper trading mode. The agent tests 3 strategies over 60 days. The best strategy (win rate 56%, Sharpe 1.1) is approved for live trading. The agent starts with 25% position size and increases to 100% after 30 days of positive performance. Result: +7% in the first 60 live days. No emotional wrong decisions.</p>
+</span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>ROI-Kalkulation</h2></span><span class="lang-en"><h2>ROI Calculation</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<p>SMartrTrader kostet ab 25,99 € pro Monat – buchbar im <a href="/shop/">Shop</a>. Was bringt das Investment? Hier die Rechnung für einen Trader mit 10.000 € Portfolio.</p>
+</span>
+<span class="lang-en">
+<p>SMartrTrader costs from €26.99 per month – available in the <a href="/shop/">shop</a>. What does the investment deliver? Here is the calculation for a trader with a €10,000 portfolio.</p>
+</span>
+<table style="width:100%;border-collapse:collapse;margin:2rem 0;">
+<thead>
+<tr style="border-bottom:2px solid var(--border,#333);">
+<th style="text-align:left;padding:12px;"><span class="lang-de">Position</span><span class="lang-en">Item</span></th>
+<th style="text-align:right;padding:12px;"><span class="lang-de">Wert pro Jahr</span><span class="lang-en">Value per year</span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Emotionale Verluste vermieden (geschätzt)</span><span class="lang-en">Emotional losses avoided (estimated)</span></td><td style="text-align:right;padding:12px;">2.400 €</td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Arbitrage-Mehrerträge (31 Trades × 42 $)</span><span class="lang-en">Arbitrage additional returns (31 trades × $42)</span></td><td style="text-align:right;padding:12px;">1.302 $</td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Win-Rate-Verbesserung (+8% auf 10.000 €)</span><span class="lang-en">Win rate improvement (+8% on €10,000)</span></td><td style="text-align:right;padding:12px;">800 €</td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Zeitersparnis (20h/Woche × 50 €/h × 52)</span><span class="lang-en">Time saved (20h/week × €50/h × 52)</span></td><td style="text-align:right;padding:12px;">52.000 €</td></tr>
+<tr style="border-bottom:2px solid var(--border,#333);"><td style="padding:12px;"><strong><span class="lang-de">Gesamtwert</span><span class="lang-en">Total value</span></strong></td><td style="text-align:right;padding:12px;"><strong>56.502 €</strong></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Kosten SMartrTrader (Pro Plan × 12)</span><span class="lang-en">SMartrTrader cost (Pro plan × 12)</span></td><td style="text-align:right;padding:12px;">431,88 €</td></tr>
+<tr style="border-bottom:2px solid var(--border,#333);"><td style="padding:12px;"><strong><span class="lang-de">Netto-ROI</span><span class="lang-en">Net ROI</span></strong></td><td style="text-align:right;padding:12px;"><strong>56.070 € (12.985%)</strong></td></tr>
+</tbody>
+</table>
+<span class="lang-de"><p>Der ROI liegt bei über 12.000%. Der größte Wert entsteht durch Zeitersparnis und vermiedene emotionale Verluste.</p></span>
+<span class="lang-en"><p>ROI exceeds 12,000%. The biggest value comes from time savings and avoided emotional losses.</p></span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Fallstudie: TradeMaster Pro</h2></span><span class="lang-en"><h2>Case Study: TradeMaster Pro</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<p><strong>Unternehmen:</strong> TradeMaster Pro, Krypto-Trading-Community, 340 Mitglieder, 1,2 Mio. € verwaltetes Kapital.</p>
+<p><strong>Herausforderung:</strong> Gründer Marcus Weber trade seit 2018. Manuell. Emotional. Nach jedem Crash schwor er Disziplin. Nach jedem Pump vergaß er es. Die Community verlor Vertrauen. Mitglieder traten ab. Die Performance war inkonsistent – mal +30%, mal -20% im Monat.</p>
+<p><strong>Implementierung:</strong> SMartrTrader wurde in 4 Stunden integriert. Anbindung an Gunbot (läuft auf AWS EC2 Tokyo Node), Binance API, Kraken API und Bybit API. Backtesting der Top-5-Strategien über 5 Jahre. Implementierungskosten: 0 € (Cloud-Setup).</p>
+<p><strong>Ergebnis nach 6 Monaten:</strong></p>
+<ul>
+<li>Win-Rate: 48% → 59%. Konsistent über alle Monate.</li>
+<li>Max Drawdown: 22% → 8,4%. Nie über das Limit.</li>
+<li>Sharpe-Ratio: 0,7 → 1,8. Risiko-adjustierte Rendite dramatisch verbessert.</li>
+<li>Arbitrage-Trades: 47 ausgeführt, +1.302 $ Nettogewinn.</li>
+<li>Arbeitszeit Marcus Weber: 20h/Woche → 3h/Woche. Fokus auf Community und Strategie.</li>
+<li>Mitgliederwachstum: +120 in 6 Monaten. Abwanderung: 0.</li>
+</ul>
+<p><strong>Fazit Marcus Weber:</strong> „SMartrTrader hat mir meine Disziplin zurückgegeben. Ich bin wieder Trader, nicht Zocker."</p>
+</span>
+<span class="lang-en">
+<p><strong>Company:</strong> TradeMaster Pro, crypto trading community, 340 members, €1.2 million assets under management.</p>
+<p><strong>Challenge:</strong> Founder Marcus Weber has been trading since 2018. Manually. Emotionally. After every crash he swore discipline. After every pump he forgot it. The community lost trust. Members left. Performance was inconsistent – sometimes +30%, sometimes -20% per month.</p>
+<p><strong>Implementation:</strong> SMartrTrader was integrated in 4 hours. Connected to Gunbot (running on AWS EC2 Tokyo Node), Binance API, Kraken API and Bybit API. Backtesting of the top 5 strategies over 5 years. Implementation cost: €0 (cloud setup).</p>
+<p><strong>Results after 6 months:</strong></p>
+<ul>
+<li>Win rate: 48% → 59%. Consistent across all months.</li>
+<li>Max drawdown: 22% → 8.4%. Never above the limit.</li>
+<li>Sharpe ratio: 0.7 → 1.8. Risk-adjusted return dramatically improved.</li>
+<li>Arbitrage trades: 47 executed, +$1,302 net profit.</li>
+<li>Marcus Weber working time: 20h/week → 3h/week. Focus on community and strategy.</li>
+<li>Member growth: +120 in 6 months. Churn: 0.</li>
+</ul>
+<p><strong>Marcus Weber's verdict:</strong> "SMartrTrader gave me my discipline back. I'm a trader again, not a gambler."</p>
+</span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Preismodell</h2></span><span class="lang-en"><h2>Pricing Model</h2></span>
+</div>
+<div class="abody">
+<table style="width:100%;border-collapse:collapse;margin:2rem 0;">
+<thead>
+<tr style="border-bottom:2px solid var(--border,#333);">
+<th style="text-align:left;padding:12px;"><span class="lang-de">Plan</span><span class="lang-en">Plan</span></th>
+<th style="text-align:left;padding:12px;"><span class="lang-de">Preis/Monat</span><span class="lang-en">Price/month</span></th>
+<th style="text-align:left;padding:12px;"><span class="lang-de">Funktionen</span><span class="lang-en">Features</span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><strong>Cloud Starter</strong></td><td style="padding:12px;">25,99 €</td><td style="padding:12px;"><span class="lang-de">1 Exchange, Paper-Trading, Basis-Backtesting (1 Jahr), 3 Strategien, Gunbot-Basis-Integration, Cloud-Deployment</span><span class="lang-en">1 exchange, paper trading, basic backtesting (1 year), 3 strategies, basic Gunbot integration, cloud deployment</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><strong>Professional</strong></td><td style="padding:12px;">36,99 €</td><td style="padding:12px;"><span class="lang-de">6 Exchanges, Live-Trading, erweitertes Backtesting (5 Jahre+), unbegrenzte Strategien, Arbitrage-Erkennung, Drawdown-Auto-Stop, Kelly-Criterion Risk-Management, Priority-Support</span><span class="lang-en">6 exchanges, live trading, advanced backtesting (5 years+), unlimited strategies, arbitrage detection, drawdown auto-stop, Kelly Criterion risk management, priority support</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="shell">
+<div class="acta">
+<span class="lang-de">
+<h2>Bereit, Ihr Trading zu disziplinieren?</h2>
+<p>Starten Sie in unter 2 Stunden. Keine Kreditkarte nötig. 30 Tage Geld-zurück-Garantie.</p>
+<a href="/cloud/" class="btn-primary">Jetzt starten</a>
+<a href="/hybrid/" class="btn-secondary">Hybrid-Optionen</a>
+</span>
+<span class="lang-en">
+<h2>Ready to discipline your trading?</h2>
+<p>Start in under 2 hours. No credit card required. 30-day money-back guarantee.</p>
+<a href="/cloud/" class="btn-primary">Get started</a>
+<a href="/hybrid/" class="btn-secondary">Hybrid options</a>
+</span>
+</div>
+</div>
+</section>
+<section class="faq">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Häufige Fragen</h2></span><span class="lang-en"><h2>Frequently Asked Questions</h2></span>
+</div>
+<div class="abody">
+<div class="faq-item">
+<h3><span class="lang-de">Ersetzt SMartrTrader meinen Trader?</span><span class="lang-en">Does SMartrTrader replace my trader?</span></h3>
+<p><span class="lang-de">Nein. SMartrTrader automatisiert Risk-Management, Backtesting und Positionsgrößen. Strategische Entscheidungen und Markteinschätzungen bleiben beim Menschen. Der Agent ist ein Werkzeug, kein autonomes Casino.</span><span class="lang-en">No. SMartrTrader automates risk management, backtesting and position sizing. Strategic decisions and market assessments remain with the human. The agent is a tool, not an autonomous casino.</span></p>
+</div>
+<div class="faq-item">
+<h3><span class="lang-de">Welche Börsen werden unterstützt?</span><span class="lang-en">Which exchanges are supported?</span></h3>
+<p><span class="lang-de">Binance, Kraken, Coinbase, KuCoin, Bybit, OKX und über 15 weitere Krypto-Börsen. Forex- und Aktien-Börsen sind in Vorbereitung. Der Professional-Plan unterstützt 6 Börsen gleichzeitig.</span><span class="lang-en">Binance, Kraken, Coinbase, KuCoin, Bybit, OKX and over 15 other crypto exchanges. Forex and stock exchanges are in preparation. The Professional plan supports 6 exchanges simultaneously.</span></p>
+</div>
+<div class="faq-item">
+<h3><span class="lang-de">Führt der Agent echte Trades aus?</span><span class="lang-en">Does the agent execute real trades?</span></h3>
+<p><span class="lang-de">Ja, mit expliziter Freigabe. SMartrTrader kann Trades automatisch ausführen, wenn die Risk-Parameter erfüllt sind. Ohne Freigabe arbeitet der Agent im Paper-Trading-Modus. Sie behalten immer die Kontrolle.</span><span class="lang-en">Yes, with explicit approval. SMartrTrader can execute trades automatically when risk parameters are met. Without approval, the agent works in paper trading mode. You always retain control.</span></p>
+</div>
+<div class="faq-item">
+<h3><span class="lang-de">Wie funktioniert das Risk-Management?</span><span class="lang-en">How does risk management work?</span></h3>
+<p><span class="lang-de">Der Agent berechnet Positionsgrößen basierend auf Kelly-Criterion, Volatilität und maximalem Drawdown. Pro Trade wird das Risk-Limit automatisch durchgesetzt. Drawdown-Limits stoppen das Trading bei Überschreitung.</span><span class="lang-en">The agent calculates position sizes based on Kelly Criterion, volatility and maximum drawdown. The risk limit is automatically enforced per trade. Drawdown limits stop trading when exceeded.</span></p>
+</div>
+<div class="faq-item">
+<h3><span class="lang-de">Kann ich eigene Strategien backtesten?</span><span class="lang-en">Can I backtest my own strategies?</span></h3>
+<p><span class="lang-de">Ja. SMartrTrader unterstützt Backtesting mit historischen Daten (5 Jahre+). Strategien können in Python definiert oder visuell im Dashboard konfiguriert werden. Der Agent liefert Performance-Metriken inklusive Sharpe-Ratio, Max-Drawdown und Win-Rate.</span><span class="lang-en">Yes. SMartrTrader supports backtesting with historical data (5 years+). Strategies can be defined in Python or configured visually in the dashboard. The agent delivers performance metrics including Sharpe ratio, max drawdown and win rate.</span></p>
+</div>
+</div>
+</div>
+</section>
+<div class="mode-nerds-block">
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Technische Architektur (Nerds-Modus)</h2></span><span class="lang-en"><h2>Technical Architecture (Nerds Mode)</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<h3>Gunbot-Integration</h3>
+<p>SMartrTrader kommuniziert mit Gunbot über die REST-API. Der Agent liest Konfiguration, überwacht Trades und passt Parameter an:</p>
+<pre><code>GET /api/v1/gunbot/config → Aktuelle Konfiguration lesen
+POST /api/v1/gunbot/config → Parameter aktualisieren
+GET /api/v1/gunbot/trades → Offene Trades abrufen
+GET /api/v1/gunbot/performance → Performance-Metriken
+POST /api/v1/gunbot/stop → Trading stoppen
+POST /api/v1/gunbot/start → Trading starten</code></pre>
+<h3>API-Beispiel: Risk-Parameter abrufen</h3>
+<pre><code>POST /api/v1/agents/smartrtrader/query
+Content-Type: application/json
+Authorization: Bearer &lt;JWT&gt;
+
+{
+  "action": "get_risk_status",
+  "portfolio": "main",
+  "include_positions": true
+}</code></pre>
+<h3>JSON-Response</h3>
+<pre><code>{
+  "status": "success",
+  "data": {
+    "portfolio_value": 10000.00,
+    "drawdown_current": 0.034,
+    "drawdown_limit_warning": 0.15,
+    "drawdown_limit_critical": 0.25,
+    "positions": [
+      { "pair": "BTC/USDT", "size": 3500, "risk_pct": 0.018, "entry": 67200 },
+      { "pair": "ETH/USDT", "size": 2200, "risk_pct": 0.014, "entry": 3420 },
+      { "pair": "SOL/USDT", "size": 800, "risk_pct": 0.012, "entry": 168 }
+    ],
+    "total_risk": 0.044,
+    "kelly_fraction": 0.25,
+    "sharpe_30d": 1.64,
+    "win_rate_30d": 0.58,
+    "arbitrage_opportunities": 2
+  },
+  "audit_trail": {
+    "agent_id": "smartrtrader-001",
+    "reasoning_steps": 8,
+    "data_sources": ["binance", "kraken", "bybit", "gunbot"],
+    "model": "glm-5.2",
+    "tokens": { "input": 1800, "output": 600 }
+  }
+}</code></pre>
+<h3>Backtesting-Engine</h3>
+<pre><code>SMartrTrader Backtesting Pipeline
+├── Data Loader → Historical OHLCV (5 Jahre+)
+├── Strategy Engine → Python / Visual Config
+├── Execution Simulator → Slippage + Fees
+├── Risk Manager → Kelly + Drawdown Limits
+├── Metrics Calculator → Sharpe, Sortino, Calmar
+└── Report Generator → Equity Curve + Trade Log</code></pre>
+<p>Die Engine nutzt pandas für Datenmanipulation, numpy für Berechnungen und matplotlib für die Equity-Kurve. Backtests mit 5 Jahren Daten und 1-Minuten-Kerzen dauern ~45 Sekunden. Ergebnisse werden als JSON + HTML-Report gespeichert.</p>
+</span>
+<span class="lang-en">
+<h3>Gunbot Integration</h3>
+<p>SMartrTrader communicates with Gunbot via REST API. The agent reads configuration, monitors trades and adjusts parameters:</p>
+<pre><code>GET /api/v1/gunbot/config → Read current configuration
+POST /api/v1/gunbot/config → Update parameters
+GET /api/v1/gunbot/trades → Get open trades
+GET /api/v1/gunbot/performance → Performance metrics
+POST /api/v1/gunbot/stop → Stop trading
+POST /api/v1/gunbot/start → Start trading</code></pre>
+<h3>API Example: Query Risk Parameters</h3>
+<pre><code>POST /api/v1/agents/smartrtrader/query
+Content-Type: application/json
+Authorization: Bearer &lt;JWT&gt;
+
+{
+  "action": "get_risk_status",
+  "portfolio": "main",
+  "include_positions": true
+}</code></pre>
+<h3>JSON Response</h3>
+<pre><code>{
+  "status": "success",
+  "data": {
+    "portfolio_value": 10000.00,
+    "drawdown_current": 0.034,
+    "drawdown_limit_warning": 0.15,
+    "drawdown_limit_critical": 0.25,
+    "positions": [
+      { "pair": "BTC/USDT", "size": 3500, "risk_pct": 0.018, "entry": 67200 },
+      { "pair": "ETH/USDT", "size": 2200, "risk_pct": 0.014, "entry": 3420 },
+      { "pair": "SOL/USDT", "size": 800, "risk_pct": 0.012, "entry": 168 }
+    ],
+    "total_risk": 0.044,
+    "kelly_fraction": 0.25,
+    "sharpe_30d": 1.64,
+    "win_rate_30d": 0.58,
+    "arbitrage_opportunities": 2
+  },
+  "audit_trail": {
+    "agent_id": "smartrtrader-001",
+    "reasoning_steps": 8,
+    "data_sources": ["binance", "kraken", "bybit", "gunbot"],
+    "model": "glm-5.2",
+    "tokens": { "input": 1800, "output": 600 }
+  }
+}</code></pre>
+<h3>Backtesting Engine</h3>
+<pre><code>SMartrTrader Backtesting Pipeline
+├── Data Loader → Historical OHLCV (5 years+)
+├── Strategy Engine → Python / Visual Config
+├── Execution Simulator → Slippage + Fees
+├── Risk Manager → Kelly + Drawdown Limits
+├── Metrics Calculator → Sharpe, Sortino, Calmar
+└── Report Generator → Equity Curve + Trade Log</code></pre>
+<p>The engine uses pandas for data manipulation, numpy for calculations and matplotlib for the equity curve. Backtests with 5 years of data and 1-minute candles take ~45 seconds. Results are saved as JSON + HTML report.</p>
+</span>
+</div>
+</div>
+</section>
+</div>
+<section class="more-agents">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Weitere SMartrAgents</h2></span><span class="lang-en"><h2>More SMartrAgents</h2></span>
+</div>
+<div class="rgrid">
+<a href="/blog/smarterceo" class="agent-link">
+<span class="lang-de">SmarterCEO – Strategische Führung & OKR-Management</span><span class="lang-en">SmarterCEO – Strategic Leadership & OKR Management</span>
+</a>
+<a href="/blog/smartritgott" class="agent-link">
+<span class="lang-de">SMartrITGott – IT-Infrastruktur & AIOps</span><span class="lang-en">SMartrITGott – IT Infrastructure & AIOps</span>
+</a>
+<a href="/blog/smartrmarketing" class="agent-link">
+<span class="lang-de">SMartrMarketing – Marketing & Growth Strategy</span><span class="lang-en">SMartrMarketing – Marketing & Growth Strategy</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div class="shell footer-grid"><div><a class="brand" href="/"><span class="brand-mark">SA</span><span>SMartr<span>Agents</span>.ai</span></a><p>Cloud-first KI-Agenten, SMarTrHybrid-Lösungen, Shop, Login, CRM-Anbindung und Schulungen.</p><p>SMarTrAgents.ai by ₳K₳ŦØŇǤƗɆ with Fable 5</p></div><div><h3>Plattform</h3><a href="/blog/">Blog</a><a href="/cloud/">Cloud</a><a href="/hybrid/">Hybrid</a><a href="/shop/">Shop</a><a href="/login/">Login</a></div><div><h3>Kontakt</h3><p>Am Kirchle 11<br>86637 Binswangen<br>Deutschland</p><a href="mailto:akatongie@smartragents.ai">akatongie@smartragents.ai</a><a href="tel:+4982726095003">+49 8272 6095003</a></div></div></footer>
+<!-- SMarTr language/mode toggle (self-contained) -->
+<style id="sma-toggle-style">
+.lang-toggle,.mode-toggle{background:#0a0f14;color:#e6f7ff;border:1px solid #23313d;border-radius:8px;padding:.4rem .9rem;margin:0 .25rem .5rem 0;font:inherit;cursor:pointer;transition:border-color .15s,color .15s,box-shadow .15s}
+.lang-toggle:hover,.mode-toggle:hover{border-color:#00e5ff;color:#00e5ff}
+.lang-toggle.is-active,.mode-toggle.is-active{color:#00e5ff;border-color:#00e5ff;box-shadow:0 0 10px rgba(0,229,255,.35);text-shadow:0 0 6px rgba(0,229,255,.5)}
+body[data-lang="de"] .lang-en{display:none!important}
+body[data-lang="en"] .lang-de{display:none!important}
+body[data-mode="user"] .mode-nerds-block{display:none!important}
+body[data-mode="nerds"] .mode-user-block{display:none!important}
+</style>
+<script id="sma-toggle-script">
+(function(){
+"use strict";
+var KEYS={lang:"sma-lang",mode:"sma-mode"};
+var state={lang:"de",mode:"user"};
+function load(k,allowed){try{var v=localStorage.getItem(KEYS[k]);if(allowed.indexOf(v)>-1){state[k]=v;}}catch(e){}}
+function save(k){try{localStorage.setItem(KEYS[k],state[k]);}catch(e){}}
+function apply(){
+document.body.setAttribute("data-lang",state.lang);
+document.body.setAttribute("data-mode",state.mode);
+document.documentElement.setAttribute("lang",state.lang);
+var i,b;
+b=document.querySelectorAll(".lang-toggle");
+for(i=0;i<b.length;i++){var on=b[i].getAttribute("data-lang")===state.lang;b[i].classList.toggle("is-active",on);b[i].setAttribute("aria-pressed",on?"true":"false");}
+b=document.querySelectorAll(".mode-toggle");
+for(i=0;i<b.length;i++){var om=b[i].getAttribute("data-mode")===state.mode;b[i].classList.toggle("is-active",om);b[i].setAttribute("aria-pressed",om?"true":"false");}
+}
+function wire(sel,key){var b=document.querySelectorAll(sel),i;for(i=0;i<b.length;i++){(function(el){el.addEventListener("click",function(){state[key]=el.getAttribute("data-"+key);save(key);apply();});})(b[i]);}}
+load("lang",["de","en"]);load("mode",["user","nerds"]);
+wire(".lang-toggle","lang");wire(".mode-toggle","mode");
+apply();
+})();
+</script>
+</body>
+</html>

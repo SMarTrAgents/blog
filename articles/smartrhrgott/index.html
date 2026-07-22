@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://smartragents.ai/blog/smartrhrgott">
+<title>SMartrHRGott – Der KI-HR-Agent | SMarTrAgents</title>
+<meta name="description" content="SMartrHRGott ist der autonome HR-Agent von SMarTrAgents: Recruiting, Onboarding, Performance-Tracking und DSGVO-konforme HR-Automatisierung.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SMartrHRGott – Der KI-HR-Agent | SMarTrAgents">
+<meta property="og:description" content="Autonomer HR-Agent: Automatisiertes Recruiting, Onboarding-Automatisierung, Performance-Tracking, Freelancer-Sourcing, DSGVO-konforme HR-Automatisierung, Team-Management und Workforce-Planning.">
+<meta property="og:url" content="https://smartragents.ai/blog/smartrhrgott">
+<meta property="og:image" content="https://smartragents.ai/assets/blog/smartrhrgott-og.jpg">
+<meta property="og:site_name" content="SMartrAgents">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SMartrHRGott – Der KI-HR-Agent | SMarTrAgents">
+<meta name="twitter:description" content="Autonomer HR-Agent: Recruiting, Onboarding, Performance-Tracking, Freelancer-Sourcing, DSGVO-konforme HR-Automatisierung.">
+<meta name="twitter:image" content="https://smartragents.ai/assets/blog/smartrhrgott-og.jpg">
+<link rel="stylesheet" href="/assets/sma-static.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "SMartrHRGott – Der KI-HR-Agent",
+      "author": { "@type": "Organization", "name": "SMartrAgents" },
+      "datePublished": "2026-07-11",
+      "description": "SMartrHRGott ist der autonome HR-Agent von SMarTrAgents.",
+      "keywords": ["KI-HR-Agent", "autonomes Recruiting", "Onboarding-Automatisierung", "Performance-Tracking", "Freelancer-Sourcing", "DSGVO-konforme HR-Automatisierung", "Workforce-Planning", "Team-Management", "EU AI Act", "DSGVO"],
+      "image": "https://smartragents.ai/assets/blog/smartrhrgott-og.jpg",
+      "publisher": { "@type": "Organization", "name": "SMartrAgents" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Ersetzt SMartrHRGott unsere HR-Abteilung?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. SMartrHRGott automatisiert repetitive HR-Prozesse wie Recruiting-Vorfilterung, Onboarding-Dokumentation und Performance-Datenerfassung. Strategische Personalentscheidungen bleiben beim Menschen. Der Agent ist ein Werkzeug, kein Ersatz." } },
+        { "@type": "Question", "name": "Wie geht SMartrHRGott mit Bewerberdaten um?", "acceptedAnswer": { "@type": "Answer", "text": "Alle Daten werden verschluesselt verarbeitet. DSGVO-konform ab dem ersten Tag. Bewerberdaten werden nach 6 Monaten automatisch geloescht oder anonymisiert, sofern keine Einwilligung zur laengeren Speicherung vorliegt. Aufbewahrungsfristen sind konfigurierbar." } },
+        { "@type": "Question", "name": "Welche HR-Tools kann SMartrHRGott anbinden?", "acceptedAnswer": { "@type": "Answer", "text": "Personio, BambooHR, Workday, SAP SuccessFactors, Salesforce, LinkedIn Recruiter, Indeed, Xing, GULP, Malt, Upwork und ueber 150 weitere Connectoren. Custom-Adapter in Python moeglich." } },
+        { "@type": "Question", "name": "Kann SMartrHRGott Freelancer automatisch vertraglich binden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Der Agent erstellt Vertragsentwuerfe aus Templates, prueft DSGVO-Klauseln, sendet Vertragsanfragen und trackt den Status. Die finale Unterschrift erfolgt durch einen Menschen. Der Agent dokumentiert jeden Schritt revisionssicher." } },
+        { "@type": "Question", "name": "Wie lange dauert die Implementierung?", "acceptedAnswer": { "@type": "Answer", "text": "Cloud-Deployment ist in unter 2 Stunden aktiv. On-Premise dauert 1-2 Tage. Vollstaendige Custom-Integration mit HR-Systemen kann 1-2 Wochen dauern. Unser Team begleitet Sie in jeder Phase." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://smartragents.ai/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://smartragents.ai/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "SMartrHRGott", "item": "https://smartragents.ai/blog/smartrhrgott" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header"><nav class="nav shell"><a class="brand" href="/" aria-label="SMartrAgents Startseite"><span class="brand-mark">SA</span><span>SMartr<span>Agents</span>.ai</span></a><div class="nav-links"><a href="/blog/">Blog</a><a href="/cloud/">Cloud</a><a href="/hybrid/">Hybrid</a><a href="/shop/">Shop</a><a href="/login/" class="login-link">Anmelden</a></div></nav></header>
+<main>
+<section class="hero">
+<div class="shell">
+<div class="navbar">
+<button class="mode-toggle" data-mode="user">User</button>
+<button class="mode-toggle" data-mode="nerds">Nerds</button>
+<button class="lang-toggle" data-lang="de">DE</button>
+<button class="lang-toggle" data-lang="en">EN</button>
+</div>
+<div class="article-card">
+<div class="mode-user-block">
+<span class="lang-de"><h1>SMartrHRGott – Der KI-HR-Agent, der Ihr Team aufbaut</h1><p>Ihre HR-Abteilung verbringt 60% der Zeit mit Admin. Stellenanzeigen schreiben, Lebensläufe filtern, Onboarding-Dokumente erstellen, Performance-Reviews vorbereiten. SMartrHRGott übernimmt das. Autonom. Präzise. DSGVO-konform. 24/7.</p><img src="/assets/blog/smartrhrgott-1.jpg" alt="SMartrHRGott KI-HR-Agent" style="width:100%;border-radius:12px;margin:1.5rem 0;"></span>
+<span class="lang-en"><h1>SMartrHRGott – The AI HR Agent That Builds Your Team</h1><p>Your HR department spends 60% of its time on admin. Writing job ads, filtering resumes, creating onboarding documents, preparing performance reviews. SMartrHRGott takes over. Autonomous. Precise. GDPR-compliant. 24/7.</p><img src="/assets/blog/smartrhrgott-1.jpg" alt="SMartrHRGott AI HR Agent" style="width:100%;border-radius:12px;margin:1.5rem 0;"></span>
+</div>
+<div class="mode-nerds-block">
+<span class="lang-de"><h1>SMartrHRGott – ReAct-basierte HR-Automatisierung mit Audit-Trail und Multi-Agent-Orchestrierung</h1><p>Autonomer <a href="/blog/was-sind-ki-agenten/">KI-Agent</a> auf Agent-Zero-Basis. NATS-Message-Bus, Redis-State-Store, ReAct-Reasoning-Loop. Automatisiert Recruiting-Pipelines, Onboarding-Workflows und Performance-Datenerfassung. API-first, vollständiger Audit-Trail, DSGVO/EU-AI-Act-konform. Über 150 HR-Connectoren.</p></span>
+<span class="lang-en"><h1>SMartrHRGott – ReAct-Based HR Automation with Audit Trail and Multi-Agent Orchestration</h1><p>Autonomous <a href="/blog/was-sind-ki-agenten/">AI agent</a> built on Agent Zero. NATS message bus, Redis state store, ReAct reasoning loop. Automates recruiting pipelines, onboarding workflows and performance data collection. API-first, full audit trail, GDPR/EU AI Act compliant. Over 150 HR connectors.</p></span>
+</div>
+</div>
+</div>
+</section>
+<section class="stats">
+<div class="shell">
+<div class="sgrid">
+<div class="stat-card">
+<span class="lang-de"><h3>60% weniger Admin</h3><p>in der HR-Abteilung durch Automatisierung</p></span>
+<span class="lang-en"><h3>60% less admin</h3><p>in HR department through automation</p></span>
+</div>
+<div class="stat-card">
+<span class="lang-de"><h3>&lt;2 Stunden</h3><p>für vollständiges Onboarding statt 3–5 Tage</p></span>
+<span class="lang-en"><h3>&lt;2 hours</h3><p>for complete onboarding instead of 3–5 days</p></span>
+</div>
+<div class="stat-card">
+<span class="lang-de"><h3>&gt;1.800%</h3><p>ROI im ersten Jahr (Durchschnitt)</p></span>
+<span class="lang-en"><h3>&gt;1,800%</h3><p>ROI in the first year (average)</p></span>
+</div>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Das HR-Dilemma 2026</h2></span>
+<span class="lang-en"><h2>The HR Dilemma 2026</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<p>HR-Abteilungen 2026 ertrinken in Administration. Sie schreiben <a href="/blog/smartrcontent/">Stellenanzeigen</a>, filtern hunderte Lebensläufe, erstellen Onboarding-Pakete, pflegen Personalakten, bereiten Performance-Reviews vor und verwalten Freelancer-Verträge. Bleibt wenig Zeit für das, was eigentlich zählt: Mitarbeitergewinnung, -bindung und -entwicklung.</p>
+<p>Der Fachkräftemangel verschärft sich. Jede offene Stelle kostet im Schnitt 150 Tage bis zur Besetzung. In IT und Engineering sogar über 200 Tage. Wer hier manuell arbeitet, verliert Talente an schnellere Wettbewerber.</p>
+<p>Regulierungen verdichten sich. DSGVO fordert strikte Datenschutz-Compliance im gesamten Mitarbeiterlebenszyklus. Der EU AI Act regelt den Einsatz von KI im Recruiting. Verträge, Einwilligungen, Löschfristen – wer hier Fehler macht, riskiert Bußgelder bis 4% des Jahresumsatzes.</p>
+<p>SMartrHRGott tritt an, um genau diese Lücke zu schließen. Der Agent automatisiert die repetitive HR-Arbeit. Er filtert Bewerber, erstellt Onboarding-Dokumente, trackt Performance-Daten, sourct Freelancer und überwacht DSGVO-Compliance. 24/7, ohne Ermüdung, ohne Fehler.</p>
+<p>Das Ergebnis: HR-Teams fokussieren sich auf Menschen, nicht auf Papier. Strategische Personalentwicklung statt Aktenhaltung.</p>
+</span>
+<span class="lang-en">
+<p>HR departments in 2026 are drowning in administration. They write <a href="/blog/smartrcontent/">job ads</a>, filter hundreds of resumes, create onboarding packages, maintain personnel files, prepare performance reviews and manage freelancer contracts. Little time remains for what actually matters: talent acquisition, retention and development.</p>
+<p>The skilled labor shortage is intensifying. Each open position takes an average of 150 days to fill. In IT and engineering, over 200 days. Anyone working manually here loses talent to faster competitors.</p>
+<p>Regulations are tightening. GDPR demands strict data protection compliance across the entire employee lifecycle. The EU AI Act regulates AI use in recruiting. Contracts, consents, deletion deadlines – mistakes here risk fines up to 4% of annual revenue.</p>
+<p>SMartrHRGott is designed to close exactly this gap. The agent automates repetitive HR work. It filters candidates, creates onboarding documents, tracks performance data, sources freelancers and monitors GDPR compliance. 24/7, without fatigue, without errors.</p>
+<p>The result: HR teams focus on people, not paperwork. Strategic workforce development instead of file management.</p>
+</span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Fünf Kernfunktionen</h2></span><span class="lang-en"><h2>Five Core Functions</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<h3>1. Automatisiertes Recruiting &amp; Candidate Screening</h3>
+<p>SMartrHRGott übernimmt die komplette Recruiting-Pipeline. Von der Stellenanzeige bis zur Shortlist. Der Agent schreibt Stellenanzeigen basierend auf Jobbeschreibungen. Veröffentlicht sie auf LinkedIn, Indeed, Xing und 20 weiteren Portalen. Filtert eingehende Bewerbungen anhand definierter Kriterien.</p>
+<p><strong>Pipeline-Detail:</strong> Phase 1: Anforderungsanalyse (Skill-Extraktion aus Jobbeschreibung, Gewichtung). Phase 2: Multi-Portal-Posting (automatisierte Veröffentlichung, Format-Anpassung pro Portal). Phase 3: CV-Parsing (Lebenslauf-Extraktion, Skill-Matching, Scoring 0–100). Phase 4: Shortlist (Top 10 Kandidaten mit Begründung, weitere 20 als Reserve). Phase 5: Interview-Vorbereitung (Fragen pro Kandidat basierend auf CV-Lücken).</p>
+<p><strong>Beispiel:</strong> Ein IT-Unternehmen sucht einen Senior Python Developer. 340 Bewerbungen in 7 Tagen. SMartrHRGott parsed alle CVs. Scored nach Skills (Python, FastAPI, PostgreSQL, Docker), Erfahrung (5+ Jahre) und Projektrelevanz. Shortlist: 8 Kandidaten mit Score &gt;85. HR-Team führt 8 Interviews statt 340 Screenings. Zeitersparnis: 60 Stunden.</p>
+<h3>2. Onboarding-Automatisierung</h3>
+<p>Neue Mitarbeiter warten oft Tage auf Zugänge, Equipment und Einführungen. SMartrHRGott beschleunigt das auf unter 2 Stunden. Der Agent erstellt automatisch alle Onboarding-Dokumente. Vertragsentwürfe aus Templates. IT-Accounts werden beantragt. Willkommenspakete bestellt. Erste-Woche-Agenda generiert.</p>
+<p><strong>Automatisierter Workflow:</strong> Vertragsentwurf (aus Template, personalisiert) → IT-Ticket (Accounts, Laptops, Zugänge) → Buddy-Zuordnung (Matching nach Skills und Abteilung) → Erste-Woche-Agenda (Meetings, Trainings, Einführungen) → Willkommens-E-Mail (personalisiert, mit allen relevanten Informationen) → Policy-Bestätigung (DSGVO, IT-Sicherheit, Verhaltenskodex). Jeder Schritt dokumentiert. Jeder Schritt auditierbar.</p>
+<p><strong>Ergebnis:</strong> Der neue Mitarbeiter ist produktiv an Tag 1 statt Tag 5. HR verbringt 30 Minuten statt 4 Stunden pro Onboarding. Bei 50 Neueinstellungen pro Jahr: 175 Stunden gespart.</p>
+<h3>3. Performance-Tracking &amp; Feedback</h3>
+<p>Performance-Reviews ohne Daten sind Bauchgefühl. SMartrHRGott sammelt kontinuierlich Performance-Daten. Aus Jira (Ticket-Abschluss), GitLab (Merge Requests), Salesforce (Verkäufe), Slack (Kollaboration) und 360-Grad-Feedback. Der Agent aggregiert die Daten. Erkennt Patterns. Generiert Performance-Reports.</p>
+<p><strong>Datenpunkte:</strong> Produktivität (Tickets closed, Merge Requests approved, Sales closed). Kollaboration (Slack-Aktivität, Meeting-Teilnahme, Peer-Feedback). Qualität (Code-Review-Scores, Customer-Satisfaction, Fehlerquote). Entwicklung (Skill-Zuwachs, Zertifikate, Training-Abschluss). Jeder Report enthält quantitative Daten und qualitative Einschätzungen. Keine Überraschungen im Review-Gespräch.</p>
+<p><strong>Beispiel:</strong> Ein Entwickler hat 78 Tickets geschlossen (Ø 4,2 Story Points). 23 Merge Requests approved (Ø 3,8 Review-Score). 360-Grad-Feedback: 4,2/5. Training: AWS Cloud Practitioner abgeschlossen. SMartrHRGott generiert den Report. Der Manager ergänzt qualitative Notizen. Fertig. Zeit: 15 Minuten statt 2 Stunden pro Mitarbeiter.</p>
+<h3>4. Freelancer-Sourcing &amp; Vertragsmanagement</h3>
+<p>Freelancer finden, vertraglich binden und verwalten kostet Zeit. SMartrHRGott automatisiert den Prozess. Der Agent durchsucht Plattformen (Malt, GULP, Upwork, Freelancer.de). Matcht Freelancer nach Skills, Verfügbarkeit und Stundensatz. Erstellt Vertragsentwürfe. Trackt Vertragsstatus.</p>
+<p><strong>Sourcing-Pipeline:</strong> Anforderung erfassen (Skills, Dauer, Budget, Startdatum) → Plattformen scannen (Malt, GULP, Upwork, Freelancer.de, LinkedIn) → Matching (Score nach Skills, Verfügbarkeit, Stundensatz, Location, Bewertungen) → Top 5 vorschlagen (mit Profil, Referenzen, Stundensatz) → Vertragsentwurf (aus Template, DSGVO-klauseln geprüft) → Status-Tracking (versendet, unterzeichnet, aktiv, abgelaufen).</p>
+<p><strong>Beispiel:</strong> Ein Unternehmen braucht einen React-Entwickler für 3 Monate, 5 Tage/Woche, max. 95€/Stunde. SMartrHRGott scannt 4 Plattformen. Findet 12 passende Freelancer. Shortlist: 5 Kandidaten mit Score &gt;80. Vertragsentwürfe erstellt. DSGVO-Klauseln geprüft. HR-Manager wählt einen aus. Unterschrift digital. Dauer: 2 Stunden statt 3 Tagen.</p>
+<h3>5. DSGVO-konforme HR-Automatisierung</h3>
+<p>DSGVO im HR-Kontext ist komplex. Bewerberdaten, Mitarbeiterdaten, Freelancer-Verträge, Performance-Daten – alles sensitiv. SMartrHRGott überwacht Compliance kontinuierlich. Nicht jährlich. Täglich.</p>
+<p>Der Agent scannt Personalakten auf abgelaufene Einwilligungen. Prüft Löschfristen und führt automatische Löschungen durch. Überwacht Datenzugriffe (wer hat wann welche Personalakte eingesehen). Dokumentiert Verarbeitungstätigkeiten nach Art. 30 DSGVO. Bei Auffälligkeiten generiert er sofort Alerts. Der Audit-Trail dokumentiert jede Aktion – rechtssicher und revisionssicher.</p>
+<p><strong>EU AI Act:</strong> SMartrHRGott klassifiziert sich als „High-Risk AI System“ gemäß AI Act. Der Agent dokumentiert Trainingsdaten, Modell-Entscheidungen und menschliche Aufsicht. Transparenz für Behörden. Konformität ab dem ersten Tag.</p>
+<img src="/assets/blog/smartrhrgott-body-1.jpg" alt="SMarTrHRGott beim Recruiting mit Kandidaten-Scan" style="width:100%;border-radius:12px;margin:1.5rem 0;" loading="lazy"></span>
+<span class="lang-en">
+<h3>1. Automated Recruiting &amp; Candidate Screening</h3>
+<p>SMartrHRGott takes over the entire recruiting pipeline. From job ad to shortlist. The agent writes job ads based on job descriptions. Publishes them on LinkedIn, Indeed, Xing and 20+ other portals. Filters incoming applications based on defined criteria.</p>
+<p><strong>Pipeline detail:</strong> Phase 1: Requirements analysis (skill extraction from job description, weighting). Phase 2: Multi-portal posting (automated publishing, format adaptation per portal). Phase 3: CV parsing (resume extraction, skill matching, scoring 0–100). Phase 4: Shortlist (top 10 candidates with justification, 20 more as reserve). Phase 5: Interview preparation (questions per candidate based on CV gaps).</p>
+<p><strong>Example:</strong> An IT company seeks a Senior Python Developer. 340 applications in 7 days. SMartrHRGott parses all CVs. Scores by skills (Python, FastAPI, PostgreSQL, Docker), experience (5+ years) and project relevance. Shortlist: 8 candidates with score &gt;85. HR team conducts 8 interviews instead of 340 screenings. Time saved: 60 hours.</p>
+<h3>2. Onboarding Automation</h3>
+<p>New employees often wait days for accounts, equipment and introductions. SMartrHRGott accelerates this to under 2 hours. The agent automatically creates all onboarding documents. Contract drafts from templates. IT accounts requested. Welcome packages ordered. First-week agenda generated.</p>
+<p><strong>Automated workflow:</strong> Contract draft (from template, personalized) → IT ticket (accounts, laptops, access) → Buddy assignment (matching by skills and department) → First-week agenda (meetings, trainings, introductions) → Welcome email (personalized, with all relevant information) → Policy confirmation (GDPR, IT security, code of conduct). Every step documented. Every step auditable.</p>
+<p><strong>Result:</strong> The new employee is productive on day 1 instead of day 5. HR spends 30 minutes instead of 4 hours per onboarding. At 50 new hires per year: 175 hours saved.</p>
+<h3>3. Performance Tracking &amp; Feedback</h3>
+<p>Performance reviews without data are gut feeling. SMartrHRGott continuously collects performance data. From Jira (ticket completion), GitLab (merge requests), Salesforce (sales), Slack (collaboration) and 360-degree feedback. The agent aggregates the data. Detects patterns. Generates performance reports.</p>
+<p><strong>Data points:</strong> Productivity (tickets closed, merge requests approved, sales closed). Collaboration (Slack activity, meeting participation, peer feedback). Quality (code review scores, customer satisfaction, error rate). Development (skill growth, certifications, training completion). Each report contains quantitative data and qualitative assessments. No surprises in review conversations.</p>
+<p><strong>Example:</strong> A developer closed 78 tickets (avg 4.2 story points). 23 merge requests approved (avg 3.8 review score). 360-degree feedback: 4.2/5. Training: AWS Cloud Practitioner completed. SMartrHRGott generates the report. The manager adds qualitative notes. Done. Time: 15 minutes instead of 2 hours per employee.</p>
+<h3>4. Freelancer Sourcing &amp; Contract Management</h3>
+<p>Finding, contracting and managing freelancers takes time. SMartrHRGott automates the process. The agent scans platforms (Malt, GULP, Upwork, Freelancer.de). Matches freelancers by skills, availability and hourly rate. Creates contract drafts. Tracks contract status.</p>
+<p><strong>Sourcing pipeline:</strong> Capture requirements (skills, duration, budget, start date) → Scan platforms (Malt, GULP, Upwork, Freelancer.de, LinkedIn) → Matching (score by skills, availability, hourly rate, location, ratings) → Suggest top 5 (with profile, references, hourly rate) → Contract draft (from template, GDPR clauses checked) → Status tracking (sent, signed, active, expired).</p>
+<p><strong>Example:</strong> A company needs a React developer for 3 months, 5 days/week, max €95/hour. SMartrHRGott scans 4 platforms. Finds 12 matching freelancers. Shortlist: 5 candidates with score &gt;80. Contract drafts created. GDPR clauses checked. HR manager selects one. Digital signature. Duration: 2 hours instead of 3 days.</p>
+<h3>5. GDPR-Compliant HR Automation</h3>
+<p>GDPR in HR context is complex. Applicant data, employee data, freelancer contracts, performance data – all sensitive. SMartrHRGott monitors compliance continuously. Not annually. Daily.</p>
+<p>The agent scans personnel files for expired consents. Checks deletion deadlines and performs automatic deletions. Monitors data access (who viewed which personnel file when). Documents processing activities per Art. 30 GDPR. When issues are detected, it immediately generates alerts. The audit trail documents every action – legally secure and auditable.</p>
+<p><strong>EU AI Act:</strong> SMartrHRGott classifies itself as a „High-Risk AI System“ under the AI Act. The agent documents training data, model decisions and human oversight. Transparency for authorities. Compliance from day one.</p>
+</span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Traditionelles HR vs. SMartrHRGott</h2></span><span class="lang-en"><h2>Traditional HR vs. SMartrHRGott</h2><img src="/assets/blog/smartrhrgott-body-1.jpg" alt="SMarTrHRGott recruiting with candidate scanning" style="width:100%;border-radius:12px;margin:1.5rem 0;" loading="lazy"></span>
+</div>
+<div class="abody">
+<table style="width:100%;border-collapse:collapse;margin:2rem 0;">
+<thead>
+<tr style="border-bottom:2px solid var(--border,#333);">
+<th style="text-align:left;padding:12px;"><span class="lang-de">Kriterium<img src="/assets/blog/smartrhrgott-body-2.jpg" alt="SMarTrHRGott automatisiert Onboarding und Team-Management" style="width:100%;border-radius:12px;margin:1.5rem 0;" loading="lazy"></span><span class="lang-en">Criterion</span></th>
+<th style="text-align:left;padding:12px;"><span class="lang-de">Traditionelles HR</span><span class="lang-en">Traditional HR</span></th>
+<th style="text-align:left;padding:12px;">SMartrHRGott</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Bewerber-Filterung</span><span class="lang-en">Candidate filtering</span></td><td style="padding:12px;"><span class="lang-de">Manuell, 5–10 Min pro CV</span><span class="lang-en">Manual, 5–10 min per CV</span></td><td style="padding:12px;"><span class="lang-de">Automatisiert, &lt;3 Sek pro CV</span><span class="lang-en">Automated, &lt;3 sec per CV</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Onboarding-Dauer</span><span class="lang-en">Onboarding duration</span></td><td style="padding:12px;"><span class="lang-de">3–5 Tage bis produktiv</span><span class="lang-en">3–5 days to productive</span></td><td style="padding:12px;"><span class="lang-de">&lt;2 Stunden bis produktiv</span><span class="lang-en">&lt;2 hours to productive</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Performance-Daten</span><span class="lang-en">Performance data</span></td><td style="padding:12px;"><span class="lang-de">Jährliche Reviews, subjektiv</span><span class="lang-en">Annual reviews, subjective</span></td><td style="padding:12px;"><span class="lang-de">Kontinuierlich, datenbasiert</span><span class="lang-en">Continuous, data-driven</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Freelancer-Sourcing</span><span class="lang-en">Freelancer sourcing</span></td><td style="padding:12px;"><span class="lang-de">3–5 Tage, manuelle Suche</span><span class="lang-en">3–5 days, manual search</span></td><td style="padding:12px;"><span class="lang-de">2 Stunden, automatisiert</span><span class="lang-en">2 hours, automated</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">DSGVO-Compliance</span><span class="lang-en">GDPR compliance</span></td><td style="padding:12px;"><span class="lang-de">Jährliche Audits, reaktiv</span><span class="lang-en">Annual audits, reactive</span></td><td style="padding:12px;"><span class="lang-de">Täglich, proaktiv, automatisiert</span><span class="lang-en">Daily, proactive, automated</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Stellenbesetzung</span><span class="lang-en">Time to fill</span></td><td style="padding:12px;"><span class="lang-de">Ø 150 Tage</span><span class="lang-en">Avg 150 days</span></td><td style="padding:12px;"><span class="lang-de">Ø 45 Tage</span><span class="lang-en">Avg 45 days</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Kosten/Monat</span><span class="lang-en">Cost/month</span></td><td style="padding:12px;"><span class="lang-de">4.000–12.000 € (HR-Mitarbeiter)</span><span class="lang-en">€4,000–12,000 (HR staff)</span></td><td style="padding:12px;"><span class="lang-de">ab 25,99 € (Ergänzung)</span><span class="lang-en">from €26.99 (supplement)</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Skalierbarkeit</span><span class="lang-en">Scalability</span></td><td style="padding:12px;"><span class="lang-de">Linear mit Personalbedarf</span><span class="lang-en">Linear with staffing needs</span></td><td style="padding:12px;"><span class="lang-de">Unbegrenzt, ohne Mehrkosten</span><span class="lang-en">Unlimited, no additional cost</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Use Cases aus der Praxis</h2></span><span class="lang-en"><h2>Real-World Use Cases</h2><img src="/assets/blog/smartrhrgott-body-2.jpg" alt="SMarTrHRGott automating onboarding and team management" style="width:100%;border-radius:12px;margin:1.5rem 0;" loading="lazy"></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<h3>1. IT-Unternehmen: Time-to-Hire von 120 auf 38 Tage reduziert</h3>
+<p>Ein mittelständisches IT-Unternehmen mit 180 Mitarbeitern. 15 offene Stellen im Engineering. Bewerber-Filterung dauerte 10 Minuten pro CV. Bei 50 Bewerbungen pro Stelle: 500 Stunden HR-Zeit. SMartrHRGott automatisiert das Parsing und Scoring. Shortlist in unter 1 Stunde. HR führt nur noch Interviews mit Top-Kandidaten. Time-to-Hire: 38 Tage statt 120. Gespart: 750 Stunden HR-Zeit in 6 Monaten.</p>
+<h3>2. E-Commerce: Onboarding von 5 Tagen auf 2 Stunden</h3>
+<p>Ein E-Commerce-Unternehmen mit saisonalem Personalbedarf. 40 neue Mitarbeiter in der Hochsaison. Onboarding dauerte 5 Tage pro Mitarbeiter. SMartrHRGott automatisiert Verträge, IT-Accounts, Willkommenspakete und erste-Woche-Agenda. Neuer Mitarbeiter ist an Tag 1 produktiv. HR-Aufwand: 30 Minuten statt 4 Stunden pro Onboarding. Bei 40 Mitarbeitern: 140 Stunden gespart in einer Saison.</p>
+<h3>3. Agentur: Freelancer-Sourcing in 2 Stunden statt 5 Tagen</h3>
+<p>Eine Digitalagentur braucht regelmäßig Freelancer für Projektspitzen. Manuelles Sourcing: 5 Tage über Malt, GULP und LinkedIn. SMartrHRGott scannt alle Plattformen simultan. Shortlist in 2 Stunden. Vertragsentwürfe automatisch erstellt. DSGVO-Klauseln geprüft. Die Agentur schließt Freelancer-Verträge 12x schneller. Bei 30 Freelancer-Projekten pro Jahr: 150 Tage gespart.</p>
+<h3>4. Klinik-Gruppe: DSGVO-Compliance über 8 Standorte</h3>
+<p>Eine Klinik-Gruppe mit 8 Standorten und 1.200 Mitarbeitern. DSGVO-Audits waren jährlich, extern, teuer. SMartrHRGott überwacht alle 8 Standorte kontinuierlich. Scannt Personalakten auf abgelaufene Einwilligungen. Prüft Löschfristen. Dokumentiert Verarbeitungstätigkeiten. Entdeckt im ersten Monat 5 abgelaufene Einwilligungen. Potenzielle Bußgelder vermieden: 80.000 €.</p>
+<h3>5. Startup: Performance-Tracking ohne Excel-Chaos</h3>
+<p>Ein B2B-SaaS-Startup mit 45 Mitarbeitern. Performance-Reviews basierten auf Excel-Listen und Bauchgefühl. SMartrHRGott sammelt Daten aus Jira, GitLab, Slack und 360-Grad-Feedback. Generiert Quarterly-Reports automatisch. Manager ergänzen qualitative Notizen. Review-Gespräche sind datenbasiert. Zeit pro Review: 15 Minuten statt 2 Stunden. Bei 45 Mitarbeitern pro Quartal: 63 Stunden gespart.</p>
+</span>
+<span class="lang-en">
+<h3>1. IT Company: Time-to-Hire from 120 to 38 Days</h3>
+<p>A mid-sized IT company with 180 employees. 15 open engineering positions. CV filtering took 10 minutes per resume. At 50 applications per position: 500 hours of HR time. SMartrHRGott automates parsing and scoring. Shortlist in under 1 hour. HR only interviews top candidates. Time-to-hire: 38 days instead of 120. Saved: 750 hours of HR time in 6 months.</p>
+<h3>2. E-Commerce: Onboarding from 5 Days to 2 Hours</h3>
+<p>An e-commerce company with seasonal staffing needs. 40 new employees in peak season. Onboarding took 5 days per employee. SMartrHRGott automates contracts, IT accounts, welcome packages and first-week agenda. New employee is productive on day 1. HR effort: 30 minutes instead of 4 hours per onboarding. At 40 employees: 140 hours saved in one season.</p>
+<h3>3. Agency: Freelancer Sourcing in 2 Hours Instead of 5 Days</h3>
+<p>A digital agency regularly needs freelancers for project peaks. Manual sourcing: 5 days across Malt, GULP and LinkedIn. SMartrHRGott scans all platforms simultaneously. Shortlist in 2 hours. Contract drafts automatically created. GDPR clauses checked. The agency closes freelancer contracts 12x faster. At 30 freelancer projects per year: 150 days saved.</p>
+<h3>4. Clinic Group: GDPR Compliance Across 8 Locations</h3>
+<p>A clinic group with 8 locations and 1,200 employees. GDPR audits were annual, external, expensive. SMartrHRGott monitors all 8 locations continuously. Scans personnel files for expired consents. Checks deletion deadlines. Documents processing activities. Discovers 5 expired consents in the first month. Potential fines avoided: €80,000.</p>
+<h3>5. Startup: Performance Tracking Without Excel Chaos</h3>
+<p>A B2B SaaS startup with 45 employees. Performance reviews were based on Excel lists and gut feeling. SMartrHRGott collects data from Jira, GitLab, Slack and 360-degree feedback. Generates quarterly reports automatically. Managers add qualitative notes. Review conversations are data-driven. Time per review: 15 minutes instead of 2 hours. At 45 employees per quarter: 63 hours saved.</p>
+</span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>ROI-Kalkulation</h2></span><span class="lang-en"><h2>ROI Calculation</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<p>SMartrHRGott kostet ab 25,99 € pro Monat – buchbar im <a href="/shop/">Shop</a>. Was bringt das Investment? Hier die Rechnung für ein mittelständisches Unternehmen mit 50–200 Mitarbeitern.</p>
+</span>
+<span class="lang-en">
+<p>SMartrHRGott costs from €26.99 per month – available in the <a href="/shop/">shop</a>. What does the investment deliver? Here is the calculation for a mid-sized company with 50–200 employees.</p>
+</span>
+<table style="width:100%;border-collapse:collapse;margin:2rem 0;">
+<thead>
+<tr style="border-bottom:2px solid var(--border,#333);">
+<th style="text-align:left;padding:12px;"><span class="lang-de">Position</span><span class="lang-en">Item</span></th>
+<th style="text-align:right;padding:12px;"><span class="lang-de">Wert pro Jahr</span><span class="lang-en">Value per year</span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Recruiting-Zeit gespart (750h × 60 €/h)</span><span class="lang-en">Recruiting time saved (750h × €60/h)</span></td><td style="text-align:right;padding:12px;">45.000 €</td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Onboarding-Zeit gespart (140h × 70 €/h)</span><span class="lang-en">Onboarding time saved (140h × €70/h)</span></td><td style="text-align:right;padding:12px;">9.800 €</td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Performance-Reviews automatisiert (252h × 80 €/h)</span><span class="lang-en">Performance reviews automated (252h × €80/h)</span></td><td style="text-align:right;padding:12px;">20.160 €</td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Freelancer-Sourcing beschleunigt (120h × 90 €/h)</span><span class="lang-en">Freelancer sourcing accelerated (120h × €90/h)</span></td><td style="text-align:right;padding:12px;">10.800 €</td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">DSGVO-Bußgelder vermieden</span><span class="lang-en">GDPR fines avoided</span></td><td style="text-align:right;padding:12px;">80.000 €</td></tr>
+<tr style="border-bottom:2px solid var(--border,#333);"><td style="padding:12px;"><strong><span class="lang-de">Gesamtwert</span><span class="lang-en">Total value</span></strong></td><td style="text-align:right;padding:12px;"><strong>165.760 €</strong></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><span class="lang-de">Kosten SMartrHRGott (Professional × 12)</span><span class="lang-en">SMartrHRGott cost (Professional × 12)</span></td><td style="text-align:right;padding:12px;">431,88 €</td></tr>
+<tr style="border-bottom:2px solid var(--border,#333);"><td style="padding:12px;"><strong><span class="lang-de">Netto-ROI</span><span class="lang-en">Net ROI</span></strong></td><td style="text-align:right;padding:12px;"><strong>165.328 € (38.285%)</strong></td></tr>
+</tbody>
+</table>
+<span class="lang-de"><p>Der ROI übersteigt 38.000% im ersten Jahr. Auch ohne vermiedene Bußgelder liegt er bei über 19.000%.</p></span>
+<span class="lang-en"><p>ROI exceeds 38,000% in the first year. Even without avoided fines, it is over 19,000%.</p></span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Fallstudie: WeberTech GmbH</h2></span><span class="lang-en"><h2>Case Study: WeberTech GmbH</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<p><strong>Unternehmen:</strong> WeberTech GmbH, Softwareentwicklung, 120 Mitarbeiter, 2 Standorte, 18 Mio. € Umsatz.</p>
+<p><strong>Herausforderung:</strong> HR-Leiterin Sandra Weber verbrachte 60% ihrer Zeit mit Admin. 8 offene Stellen, 200+ Bewerbungen pro Monat. Onboarding dauerte 4 Tage. Performance-Reviews waren jährlich, subjektiv und gefürchtet. Freelancer-Sourcing fraß 5 Tage pro Projekt. DSGVO-Audits waren extern, teuer und jährlich. Strategische Personalentwicklung kam nicht vor.</p>
+<p><strong>Implementierung:</strong> SMartrHRGott wurde in 1 Tag integriert. Anbindung an Personio (HRIS), Greenhouse (ATS), Slack, Jira und GitLab. Custom-Adapter für die hauseigene Zeiterfassung. Implementierungskosten: 1.499 € einmalig.</p>
+<p><strong>Ergebnis nach 6 Monaten:</strong></p>
+<ul>
+<li>Recruiting: 340 Bewerbungen automatisiert gescannt. Time-to-Hire: 120 → 38 Tage.</li>
+<li>Onboarding: 12 neue Mitarbeiter in &lt;2 Stunden produktiv. 132 Stunden HR-Zeit gespart.</li>
+<li>Performance-Tracking: Quarterly-Reports automatisch. 126 Stunden gespart.</li>
+<li>Freelancer: 7 Projekte besetzt in je 2 Stunden statt 5 Tagen. 147 Tage gespart.</li>
+<li>DSGVO: 4 abgelaufene Einwilligungen frühzeitig erkannt. Potenzielle Bußgelder vermieden: 60.000 €.</li>
+<li>Strategische Zeit der HR-Leiterin: +20 Stunden pro Woche für Personalentwicklung.</li>
+<li>Mitarbeiterzufriedenheit (eNPS): +14 Punkte in 6 Monaten.</li>
+</ul>
+<p><strong>Fazit Sandra Weber:</strong> „SMartrHRGott hat mir mein Handwerkszeug zurückgegeben. Ich bin wieder HR-Leiterin, nicht Aktenverwalterin.“</p>
+</span>
+<span class="lang-en">
+<p><strong>Company:</strong> WeberTech GmbH, software development, 120 employees, 2 locations, €18 million revenue.</p>
+<p><strong>Challenge:</strong> HR Director Sandra Weber spent 60% of her time on admin. 8 open positions, 200+ applications per month. Onboarding took 4 days. Performance reviews were annual, subjective and feared. Freelancer sourcing consumed 5 days per project. GDPR audits were external, expensive and annual. Strategic workforce development didn't happen.</p>
+<p><strong>Implementation:</strong> SMartrHRGott was integrated in 1 day. Connected to Personio (HRIS), Greenhouse (ATS), Slack, Jira and GitLab. Custom adapter for the in-house time tracking system. Implementation cost: €1,499 one-time.</p>
+<p><strong>Results after 6 months:</strong></p>
+<ul>
+<li>Recruiting: 340 applications automatically scanned. Time-to-hire: 120 → 38 days.</li>
+<li>Onboarding: 12 new employees productive in &lt;2 hours. 132 hours of HR time saved.</li>
+<li>Performance tracking: Quarterly reports automatic. 126 hours saved.</li>
+<li>Freelancers: 7 projects staffed in 2 hours each instead of 5 days. 147 days saved.</li>
+<li>GDPR: 4 expired consents detected early. Potential fines avoided: €60,000.</li>
+<li>HR Director strategic time: +20 hours per week for workforce development.</li>
+<li>Employee satisfaction (eNPS): +14 points in 6 months.</li>
+</ul>
+<p><strong>Sandra Weber's verdict:</strong> „SMartrHRGott gave me my craft back. I'm an HR director again, not a file manager.“</p>
+</span>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Preismodell</h2></span><span class="lang-en"><h2>Pricing Model</h2></span>
+</div>
+<div class="abody">
+<table style="width:100%;border-collapse:collapse;margin:2rem 0;">
+<thead>
+<tr style="border-bottom:2px solid var(--border,#333);">
+<th style="text-align:left;padding:12px;"><span class="lang-de">Plan</span><span class="lang-en">Plan</span></th>
+<th style="text-align:left;padding:12px;"><span class="lang-de">Preis/Monat</span><span class="lang-en">Price/month</span></th>
+<th style="text-align:left;padding:12px;"><span class="lang-de">Funktionen</span><span class="lang-en">Features</span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><strong>Cloud Starter</strong></td><td style="padding:12px;">25,99 €</td><td style="padding:12px;"><span class="lang-de">Basis-Recruiting, Onboarding-Templates, 3 Datenquellen, 1 Standort, Cloud-Deployment</span><span class="lang-en">Basic recruiting, onboarding templates, 3 data sources, 1 location, cloud deployment</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><strong>Professional</strong></td><td style="padding:12px;">36,99 €</td><td style="padding:12px;"><span class="lang-de">Full Recruiting-Pipeline, Performance-Tracking, Freelancer-Sourcing, 20 Datenquellen, 5 Standorte, DSGVO-Monitoring, Hybrid-Deployment</span><span class="lang-en">Full recruiting pipeline, performance tracking, freelancer sourcing, 20 data sources, 5 locations, GDPR monitoring, hybrid deployment</span></td></tr>
+<tr style="border-bottom:1px solid var(--border,#222);"><td style="padding:12px;"><strong>Enterprise</strong></td><td style="padding:12px;"><span class="lang-de">Auf Anfrage</span><span class="lang-en">On request</span></td><td style="padding:12px;"><span class="lang-de">Unbegrenzte Quellen, Multi-Agenten-Orchestrierung, On-Premise, Custom-Adapter, Workforce-Planning-Suite, 24/7 Support</span><span class="lang-en">Unlimited sources, multi-agent orchestration, on-premise, custom adapters, workforce planning suite, 24/7 support</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="shell">
+<div class="acta">
+<span class="lang-de">
+<h2>Bereit, Ihr HR zu automatisieren?</h2>
+<p>Starten Sie in unter 2 Stunden. Keine Kreditkarte nötig. 30 Tage Geld-zurück-Garantie.</p>
+<a href="/cloud/" class="btn-primary">Jetzt starten</a>
+<a href="/hybrid/" class="btn-secondary">Hybrid-Optionen</a>
+</span>
+<span class="lang-en">
+<h2>Ready to automate your HR?</h2>
+<p>Start in under 2 hours. No credit card required. 30-day money-back guarantee.</p>
+<a href="/cloud/" class="btn-primary">Get started</a>
+<a href="/hybrid/" class="btn-secondary">Hybrid options</a>
+</span>
+</div>
+</div>
+</section>
+<section class="faq">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Häufige Fragen</h2></span><span class="lang-en"><h2>Frequently Asked Questions</h2></span>
+</div>
+<div class="abody">
+<div class="faq-item">
+<h3><span class="lang-de">Ersetzt SMartrHRGott unsere HR-Abteilung?</span><span class="lang-en">Does SMartrHRGott replace our HR department?</span></h3>
+<p><span class="lang-de">Nein. SMartrHRGott automatisiert repetitive HR-Prozesse wie Recruiting-Vorfilterung, Onboarding-Dokumentation und Performance-Datenerfassung. Strategische Personalentscheidungen bleiben beim Menschen. Der Agent ist ein Werkzeug, kein Ersatz. HR-Teams gewinnen Zeit für das, was wirklich zählt: Menschen.</span><span class="lang-en">No. SMartrHRGott automates repetitive HR processes like recruiting pre-filtering, onboarding documentation and performance data collection. Strategic personnel decisions remain with humans. The agent is a tool, not a replacement. HR teams gain time for what truly matters: people.</span></p>
+</div>
+<div class="faq-item">
+<h3><span class="lang-de">Wie geht SMartrHRGott mit Bewerberdaten um?</span><span class="lang-en">How does SMartrHRGott handle applicant data?</span></h3>
+<p><span class="lang-de">Alle Daten werden verschlüsselt verarbeitet. DSGVO-konform ab dem ersten Tag. Bewerberdaten werden nach 6 Monaten automatisch gelöscht oder anonymisiert, sofern keine Einwilligung zur längeren Speicherung vorliegt. Aufbewahrungsfristen sind konfigurierbar. Der Audit-Trail dokumentiert jede Verarbeitung revisionssicher.</span><span class="lang-en">All data is processed encrypted. GDPR-compliant from day one. Applicant data is automatically deleted or anonymized after 6 months, unless consent for longer storage is given. Retention periods are configurable. The audit trail documents every processing step in a revision-secure manner.</span></p>
+</div>
+<div class="faq-item">
+<h3><span class="lang-de">Welche HR-Tools kann SMartrHRGott anbinden?</span><span class="lang-en">Which HR tools can SMartrHRGott connect to?</span></h3>
+<p><span class="lang-de">Personio, BambooHR, Workday, SAP SuccessFactors, Salesforce, LinkedIn Recruiter, Indeed, Xing, GULP, Malt, Upwork und über 150 weitere Connectoren. Custom-Adapter können in Python geschrieben werden. Die Integration dauert 1–5 Tage je nach Komplexität.</span><span class="lang-en">Personio, BambooHR, Workday, SAP SuccessFactors, Salesforce, LinkedIn Recruiter, Indeed, Xing, GULP, Malt, Upwork and over 150 other connectors. Custom adapters can be written in Python. Integration takes 1–5 days depending on complexity.</span></p>
+</div>
+<div class="faq-item">
+<h3><span class="lang-de">Kann SMartrHRGott Freelancer automatisch vertraglich binden?</span><span class="lang-en">Can SMartrHRGott automatically contract freelancers?</span></h3>
+<p><span class="lang-de">Ja. Der Agent erstellt Vertragsentwürfe aus Templates, prüft DSGVO-Klauseln, sendet Vertragsanfragen und trackt den Status. Die finale Unterschrift erfolgt durch einen Menschen. Der Agent dokumentiert jeden Schritt revisionssicher. So bleibt die rechtliche Kontrolle bei Ihnen, die Administrative beim Agenten.</span><span class="lang-en">Yes. The agent creates contract drafts from templates, checks GDPR clauses, sends contract requests and tracks status. The final signature is done by a human. The agent documents every step in a revision-secure manner. Legal control stays with you, administrative work goes to the agent.</span></p>
+</div>
+<div class="faq-item">
+<h3><span class="lang-de">Wie lange dauert die Implementierung?</span><span class="lang-en">How long does implementation take?</span></h3>
+<p><span class="lang-de">Cloud-Deployment ist in unter 2 Stunden aktiv. On-Premise dauert 1–2 Tage inklusive Setup und Datenanbindung. Vollständige Custom-Integration mit HR-Systemen kann 1–2 Wochen in Anspruch nehmen. Unser Team begleitet Sie in jeder Phase. Von der Anbindung bis zum Go-Live.</span><span class="lang-en">Cloud deployment is active in under 2 hours. On-premise takes 1–2 days including setup and data connection. Full custom integration with HR systems can take 1–2 weeks. Our team supports you in every phase. From connection to go-live.</span></p>
+</div>
+</div>
+</div>
+</section>
+<div class="mode-nerds-block">
+<section class="content">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Technische Architektur (Nerds-Modus)</h2></span><span class="lang-en"><h2>Technical Architecture (Nerds Mode)</h2></span>
+</div>
+<div class="abody">
+<span class="lang-de">
+<h3>ReAct-Reasoning-Loop</h3>
+<p>SMartrHRGott nutzt den ReAct-Ansatz (Reasoning + Acting). Jede HR-Aufgabe durchläuft einen iterativen Zyklus:</p>
+<pre><code>Observe → Think → Act → Reflect → Observe → ...</code></pre>
+<p>Der Agent beobachtet HR-Datenquellen (Observe), bildet Hypothesen über Kandidaten-Matching oder Performance-Pattern (Think), führt Aktionen wie CV-Parsing oder Report-Generierung aus (Act) und evaluiert Ergebnisse (Reflect). Bei Bedarf startet ein neuer Zyklus. Bis zu 50 Iterationen pro Aufgabe. Mit Timeout nach 300 Sekunden.</p>
+<h3>API-Beispiel: Bewerber-Shortlist abrufen</h3>
+<pre><code>POST /api/v1/agents/smartrhrgott/query
+Content-Type: application/json
+Authorization: Bearer &lt;JWT&gt;
+
+{
+  "action": "get_candidate_shortlist",
+  "job_id": "JOB-2026-0042",
+  "filters": { "min_score": 75, "max_results": 10 }
+}</code></pre>
+<h3>JSON-Response</h3>
+<pre><code>{
+  "status": "success",
+  "data": {
+    "job_id": "JOB-2026-0042",
+    "job_title": "Senior Python Developer",
+    "total_applications": 340,
+    "shortlist": [
+      {
+        "candidate_id": "CAND-00128",
+        "name": "[REDACTED]",
+        "score": 92,
+        "skills_matched": ["Python", "FastAPI", "PostgreSQL", "Docker"],
+        "experience_years": 7,
+        "last_role": "Senior Backend Engineer",
+        "interview_questions": [
+          "Erfahrung mit Async FastAPI Endpoints?",
+          "Skalierung von PostgreSQL auf 10M+ Rows?",
+          "Docker Multi-Stage Build Optimierung?"
+        ]
+      },
+      {
+        "candidate_id": "CAND-00267",
+        "name": "[REDACTED]",
+        "score": 88,
+        "skills_matched": ["Python", "Django", "PostgreSQL", "Kubernetes"],
+        "experience_years": 6,
+        "last_role": "Backend Lead",
+        "interview_questions": [
+          "Migration von Django zu FastAPI?",
+          "Kubernetes Helm Charts für Python Services?"
+        ]
+      }
+    ],
+    "generated_at": "2026-07-11T10:15:00Z",
+    "processing_time_ms": 2450
+  },
+  "audit_trail": {
+    "agent_id": "smartrhrgott-001",
+    "reasoning_steps": 18,
+    "data_sources": ["greenhouse", "linkedin", "internal_db"],
+    "model": "glm-5.2",
+    "tokens": { "input": 5200, "output": 2400 },
+    "gdpr_flags": {
+      "data_minimization": true,
+      "consent_verified": true,
+      "retention_check": "2026-09-11"
+    }
+  }
+}</code></pre>
+<h3>Audit-Trail &amp; DSGVO-Dokumentation</h3>
+<p>Jede SMartrHRGott-Aktion wird protokolliert. Der Audit-Trail enthält: Agent-ID, Zeitstempel, Reasoning-Steps, Datenquellen, Modell, Token-Verbrauch, Input/Output-Hashes, DSGVO-Flags (Data Minimization, Consent Verified, Retention Check). Speicherung in SQLite oder PostgreSQL. Verschlüsselt, manipulationssicher, revisionssicher. Aufbewahrung gemäß DSGVO-Aufbewahrungsfristen. Verarbeitungstätigkeiten werden automatisch nach Art. 30 DSGVO dokumentiert.</p>
+<h3>Multi-Agenten-Stack</h3>
+<pre><code>SMartrHRGott (HR Orchestrator)
+├── Recruiting Sub-Agent → CV-Parsing, Skill-Matching, Multi-Portal-Posting
+├── Onboarding Sub-Agent → Vertrags-Templates, IT-Tickets, Buddy-Matching
+├── Performance Sub-Agent → Daten-Aggregation, Pattern-Erkennung, Report-Generierung
+├── Freelancer Sub-Agent → Plattform-Scanning, Vertrags-Erstellung, Status-Tracking
+├── Compliance Sub-Agent → DSGVO-Scanning, Löschfristen, Verarbeitungstätigkeiten
+└── (Custom Sub-Agenten möglich)</code></pre>
+<p>Kommunikation über NATS JetStream. State in Redis. Jeder Sub-Agent kann unabhängig skalieren. Fehler-Isolation: Ein Sub-Agent-Crash beeinträchtigt nicht den Orchestrator. Circuit-Breaker-Pattern aktiviert bei 3 Fehlern in 60 Sekunden. SMartrHRGott selbst kann als Sub-Agent von SmarterCEO orchestriert werden.</p>
+</span>
+<span class="lang-en">
+<h3>ReAct Reasoning Loop</h3>
+<p>SMartrHRGott uses the ReAct approach (Reasoning + Acting). Each HR task goes through an iterative cycle:</p>
+<pre><code>Observe → Think → Act → Reflect → Observe → ...</code></pre>
+<p>The agent observes HR data sources (Observe), forms hypotheses about candidate matching or performance patterns (Think), executes actions like CV parsing or report generation (Act) and evaluates results (Reflect). If needed, a new cycle starts. Up to 50 iterations per task. With timeout after 300 seconds.</p>
+<h3>API Example: Query Candidate Shortlist</h3>
+<pre><code>POST /api/v1/agents/smartrhrgott/query
+Content-Type: application/json
+Authorization: Bearer &lt;JWT&gt;
+
+{
+  "action": "get_candidate_shortlist",
+  "job_id": "JOB-2026-0042",
+  "filters": { "min_score": 75, "max_results": 10 }
+}</code></pre>
+<h3>JSON Response</h3>
+<pre><code>{
+  "status": "success",
+  "data": {
+    "job_id": "JOB-2026-0042",
+    "job_title": "Senior Python Developer",
+    "total_applications": 340,
+    "shortlist": [
+      {
+        "candidate_id": "CAND-00128",
+        "name": "[REDACTED]",
+        "score": 92,
+        "skills_matched": ["Python", "FastAPI", "PostgreSQL", "Docker"],
+        "experience_years": 7,
+        "last_role": "Senior Backend Engineer",
+        "interview_questions": [
+          "Experience with async FastAPI endpoints?",
+          "Scaling PostgreSQL to 10M+ rows?",
+          "Docker multi-stage build optimization?"
+        ]
+      },
+      {
+        "candidate_id": "CAND-00267",
+        "name": "[REDACTED]",
+        "score": 88,
+        "skills_matched": ["Python", "Django", "PostgreSQL", "Kubernetes"],
+        "experience_years": 6,
+        "last_role": "Backend Lead",
+        "interview_questions": [
+          "Migration from Django to FastAPI?",
+          "Kubernetes Helm charts for Python services?"
+        ]
+      }
+    ],
+    "generated_at": "2026-07-11T10:15:00Z",
+    "processing_time_ms": 2450
+  },
+  "audit_trail": {
+    "agent_id": "smartrhrgott-001",
+    "reasoning_steps": 18,
+    "data_sources": ["greenhouse", "linkedin", "internal_db"],
+    "model": "glm-5.2",
+    "tokens": { "input": 5200, "output": 2400 },
+    "gdpr_flags": {
+      "data_minimization": true,
+      "consent_verified": true,
+      "retention_check": "2026-09-11"
+    }
+  }
+}</code></pre>
+<h3>Audit Trail &amp; GDPR Documentation</h3>
+<p>Every SMartrHRGott action is logged. The audit trail contains: agent ID, timestamp, reasoning steps, data sources, model, token consumption, input/output hashes, GDPR flags (data minimization, consent verified, retention check). Storage in SQLite or PostgreSQL. Encrypted, tamper-proof, auditable. Retention according to GDPR retention periods. Processing activities are automatically documented per Art. 30 GDPR.</p>
+<h3>Multi-Agent Stack</h3>
+<pre><code>SMartrHRGott (HR Orchestrator)
+├── Recruiting Sub-Agent → CV parsing, skill matching, multi-portal posting
+├── Onboarding Sub-Agent → contract templates, IT tickets, buddy matching
+├── Performance Sub-Agent → data aggregation, pattern detection, report generation
+├── Freelancer Sub-Agent → platform scanning, contract creation, status tracking
+├── Compliance Sub-Agent → GDPR scanning, deletion deadlines, processing activities
+└── (Custom sub-agents possible)</code></pre>
+<p>Communication via NATS JetStream. State in Redis. Each sub-agent can scale independently. Error isolation: a sub-agent crash does not affect the orchestrator. Circuit breaker pattern activated after 3 failures in 60 seconds. SMartrHRGott itself can be orchestrated as a sub-agent by SmarterCEO.</p>
+</span>
+</div>
+</div>
+</section>
+</div>
+<section class="more-agents">
+<div class="shell">
+<div class="section-heading">
+<span class="lang-de"><h2>Weitere SMartrAgents</h2></span><span class="lang-en"><h2>More SMartrAgents</h2></span>
+</div>
+<div class="rgrid">
+<a href="/blog/smarterpentester" class="agent-link">
+<span class="lang-de">SmarterPentester – Security &amp; Penetration Testing</span><span class="lang-en">SmarterPentester – Security &amp; Penetration Testing</span>
+</a>
+<a href="/blog/smartrcontent" class="agent-link">
+<span class="lang-de">SMartrContent – Content Creation &amp; SEO</span><span class="lang-en">SMartrContent – Content Creation &amp; SEO</span>
+</a>
+<a href="/blog/smarterceo" class="agent-link">
+<span class="lang-de">SmarterCEO – Strategic Leadership &amp; OKR-Management</span><span class="lang-en">SmarterCEO – Strategic Leadership &amp; OKR Management</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div class="shell footer-grid"><div><a class="brand" href="/"><span class="brand-mark">SA</span><span>SMartr<span>Agents</span>.ai</span></a><p>Cloud-first KI-Agenten, SMarTrHybrid-Lösungen, Shop, Login, CRM-Anbindung und Schulungen.</p><p>SMarTrAgents.ai by ₳K₳ŦØŇǤƗɆ with Fable 5</p></div><div><h3>Plattform</h3><a href="/blog/">Blog</a><a href="/cloud/">Cloud</a><a href="/hybrid/">Hybrid</a><a href="/shop/">Shop</a><a href="/login/">Login</a></div><div><h3>Kontakt</h3><p>Am Kirchle 11<br>86637 Binswangen<br>Deutschland</p><a href="mailto:akatongie@smartragents.ai">akatongie@smartragents.ai</a><a href="tel:+4982726095003">+49 8272 6095003</a></div></div></footer>
+<!-- SMarTr language/mode toggle (self-contained) -->
+<style id="sma-toggle-style">
+.lang-toggle,.mode-toggle{background:#0a0f14;color:#e6f7ff;border:1px solid #23313d;border-radius:8px;padding:.4rem .9rem;margin:0 .25rem .5rem 0;font:inherit;cursor:pointer;transition:border-color .15s,color .15s,box-shadow .15s}
+.lang-toggle:hover,.mode-toggle:hover{border-color:#00e5ff;color:#00e5ff}
+.lang-toggle.is-active,.mode-toggle.is-active{color:#00e5ff;border-color:#00e5ff;box-shadow:0 0 10px rgba(0,229,255,.35);text-shadow:0 0 6px rgba(0,229,255,.5)}
+body[data-lang="de"] .lang-en{display:none!important}
+body[data-lang="en"] .lang-de{display:none!important}
+body[data-mode="user"] .mode-nerds-block{display:none!important}
+body[data-mode="nerds"] .mode-user-block{display:none!important}
+</style>
+<script id="sma-toggle-script">
+(function(){
+"use strict";
+var KEYS={lang:"sma-lang",mode:"sma-mode"};
+var state={lang:"de",mode:"user"};
+function load(k,allowed){try{var v=localStorage.getItem(KEYS[k]);if(allowed.indexOf(v)>-1){state[k]=v;}}catch(e){}}
+function save(k){try{localStorage.setItem(KEYS[k],state[k]);}catch(e){}}
+function apply(){
+document.body.setAttribute("data-lang",state.lang);
+document.body.setAttribute("data-mode",state.mode);
+document.documentElement.setAttribute("lang",state.lang);
+var i,b;
+b=document.querySelectorAll(".lang-toggle");
+for(i=0;i<b.length;i++){var on=b[i].getAttribute("data-lang")===state.lang;b[i].classList.toggle("is-active",on);b[i].setAttribute("aria-pressed",on?"true":"false");}
+b=document.querySelectorAll(".mode-toggle");
+for(i=0;i<b.length;i++){var om=b[i].getAttribute("data-mode")===state.mode;b[i].classList.toggle("is-active",om);b[i].setAttribute("aria-pressed",om?"true":"false");}
+}
+function wire(sel,key){var b=document.querySelectorAll(sel),i;for(i=0;i<b.length;i++){(function(el){el.addEventListener("click",function(){state[key]=el.getAttribute("data-"+key);save(key);apply();});})(b[i]);}}
+load("lang",["de","en"]);load("mode",["user","nerds"]);
+wire(".lang-toggle","lang");wire(".mode-toggle","mode");
+apply();
+})();
+</script>
+</body>
+</html>
